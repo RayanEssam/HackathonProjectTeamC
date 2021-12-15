@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  HackathonApp
 //
-//  Created by Rayan Taj on 15/12/2021.
+//  Created by Abdullah AlRashoudi on 12/15/21.
 //
 
 import UIKit
@@ -11,10 +11,11 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
         FirebaseApp.configure()
-
         return true
     }
 

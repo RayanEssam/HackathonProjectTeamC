@@ -2,7 +2,7 @@
 //  ContnetViewController.swift
 //  HackathonApp
 //
-//  Created by Rayan Taj on 15/12/2021.
+//  Created by Abdullah AlRashoudi on 12/15/21.
 //
 
 import UIKit

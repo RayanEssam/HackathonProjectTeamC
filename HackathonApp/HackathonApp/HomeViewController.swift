@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
         mainActionButton.layer.cornerRadius = 15
         view.addSubview(mainActionButton)
         
-        view.backgroundColor =  UIColor( patternImage: UIImage(named: "back")!)
+        view.backgroundColor =  UIColor(patternImage: UIImage(named: "back")!)
         
         
         view.addSubview(mainTextLabel)
