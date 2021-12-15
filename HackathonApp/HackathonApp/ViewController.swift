@@ -96,27 +96,32 @@ class ViewController: UIViewController {
                 
                 let tabBarVC = UITabBarController()
                 let vc1 = UINavigationController(rootViewController: HomeViewController())
-                let vc2 = UINavigationController(rootViewController: ContnetViewController())
-                let vc3 = UINavigationController(rootViewController: CommunitiesViewController())
+                let vc2 = UINavigationController(rootViewController: CommunitiesViewController())
+                let vc3 = UINavigationController(rootViewController: ContnetViewController())
                 let vc4 = UINavigationController(rootViewController: ProfileViewController())
+               
                 
-                vc1.title = "Home"
-                vc2.title = "Contnet"
-                vc3.title = "Communities"
-                vc4.title = "Profile"
-//
-                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4], animated: false)
+               
+                
+                vc1.title = "الملف الشخصي"
+                vc2.title = "المجتمعات"
+                vc3.title = "المحتوى"
+                vc4.title = "الرئيسية"
+              
+            
+             
+                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4], animated: true)
                 
                 guard let items = tabBarVC.tabBar.items else {return}
                 
-                let images = ["house","note.text","person.3", "person.crop.circle"]
+                let images = ["person.crop.circle","person.3","note.text","house" ]
                 
                 for i in 0..<items.count {
                     items[i].image = UIImage(systemName: images[i])
                 }
                 
                 tabBarVC.tabBar.backgroundColor = .white
-                tabBarVC.tabBar.tintColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
+                tabBarVC.tabBar.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
                 tabBarVC.modalPresentationStyle = .fullScreen
                 self.present(tabBarVC, animated: true, completion: nil)
                 
