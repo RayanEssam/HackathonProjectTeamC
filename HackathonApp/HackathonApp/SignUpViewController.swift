@@ -1,9 +1,3 @@
-//
-//  SignUpViewController.swift
-//  HackathonApp
-//
-//  Created by Rayan Taj on 15/12/2021.
-//
 
 import UIKit
 import Firebase
@@ -13,6 +7,7 @@ class SignUpViewController: UIViewController {
     let lineView = UIView()
     let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
     let pageName = UILabel()
+    let title1 = UILabel()
     let nameTextField = UITextField()
     let idTextField = UITextField()
     let emailTextField = UITextField()
@@ -21,6 +16,7 @@ class SignUpViewController: UIViewController {
     let backButton = UIButton()
     let signInLabel = UILabel()
     let signInButton = UIButton()
+    let imageD = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,44 +25,55 @@ class SignUpViewController: UIViewController {
         let largeBoldChevron = UIImage(systemName: "chevron.backward", withConfiguration: largeConfig)
         backButton.setImage(largeBoldChevron, for: .normal)
         backButton.frame = CGRect(x: 0, y: 50, width: 50, height: 50)
-        backButton.tintColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
+        backButton.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         backButton.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
         view.addSubview(backButton)
         //MARK: - PageName
-        pageName.text = "Registration App"
-        pageName.textColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
-        pageName.frame = CGRect(x: 60, y: 50, width: 310, height: 50)
-        pageName.font = .systemFont(ofSize: 40, weight: .semibold)
+        pageName.text = "تسجيل الدخول"
+        pageName.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        pageName.frame = CGRect(x: 40, y: 50, width: 310, height: 50)
+        pageName.font = .systemFont(ofSize: 15, weight: .semibold)
         view.addSubview(pageName)
+        //
+        title1.text = "شاركنا .. لنغرسها"
+        title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        title1.textAlignment = .center
+        title1.frame = CGRect(x: 28, y: 150, width: 350, height: 50)
+        title1.font = .systemFont(ofSize: 50, weight: .semibold)
+        view.addSubview(title1)
         //MARK: - NameTextField
-        nameTextField.placeholder = "Enter your name"
+        nameTextField.placeholder = "الاسم"
+        nameTextField.textAlignment = .right
         nameTextField.borderStyle = .roundedRect
-        nameTextField.frame = CGRect(x: 20, y: 150, width: 350, height: 34)
+        nameTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(nameTextField)
 
         //MARK: - IDTextField
-        idTextField.placeholder = "Enter your ID"
+        idTextField.placeholder = "رقم الهوية"
+        idTextField.textAlignment = .right
         idTextField.borderStyle = .roundedRect
-        idTextField.frame = CGRect(x: 20, y: 200, width: 350, height: 34)
+        idTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
         view.addSubview(idTextField)
         //MARK: - EmailTextField
-        emailTextField.placeholder = "Enter your email"
+        emailTextField.placeholder = " الايميل"
+        emailTextField.textAlignment = .right
         emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
-        emailTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
+        emailTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
-        passwordTextField.placeholder = "Enter your password"
+        passwordTextField.placeholder = " كلمة السر"
+        passwordTextField.textAlignment = .right
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
+        passwordTextField.frame = CGRect(x: 20, y: 400, width: 350, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - SignUpButton
-        signUpButton.setTitle("SignUp", for: .normal)
-        signUpButton.setTitleColor(#colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1), for: .normal)
-        signUpButton.backgroundColor = #colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)
+        signUpButton.setTitle("انشاء حساب", for: .normal)
+        signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
-        signUpButton.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
+        signUpButton.frame = CGRect(x: 20, y: 450, width: 350, height: 34)
         signUpButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         view.addSubview(signUpButton)
@@ -75,20 +82,24 @@ class SignUpViewController: UIViewController {
         lineView.frame = CGRect(x: 0 , y: 750, width: view.frame.size.width, height: 3)
         view.addSubview(lineView)
         //MARK: - SignInLabel
-        signInLabel.text = "Already have an account?"
+        signInLabel.text = "لديك حساب ؟"
         signInLabel.font = .systemFont(ofSize: 17, weight: .regular)
-        signInLabel.frame = CGRect(x: 30, y: 750, width: 300, height: 60)
+        signInLabel.frame = CGRect(x: 90, y: 750, width: 300, height: 60)
         signInLabel.textAlignment = .center
         view.addSubview(signInLabel)
         //MARK: - SignInButton
-        signInButton.setTitle("SignIn", for: .normal)
-        signInButton.setTitleColor(.systemBlue, for: .normal)
+        signInButton.setTitle("تسجيل دخول", for: .normal)
+        signInButton.setTitleColor(UIColor (#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)), for: .normal)
         signInButton.layer.cornerRadius = 15
-        signInButton.frame = CGRect(x: 270, y: 763, width: 80, height: 34)
+        signInButton.frame = CGRect(x: 60, y: 763, width: 150, height: 34)
         signInButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
         view.addSubview(signInButton)
-        
+        //
+        imageD.image = UIImage(named: "p5")
+        imageD.frame = CGRect(x: 80, y: 500 , width: 250, height: 250)
+        imageD.contentMode = .scaleAspectFill
+        view.addSubview(imageD)
     }
     //MARK: - Methods
     @objc func signUp() {
