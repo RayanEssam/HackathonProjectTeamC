@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1ACCBD276A678200FDF957 /* CommunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ACCBC276A678200FDF957 /* CommunitiesCell.swift */; };
 		45DAEA674546DF3D776E8874 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061B32EC020C94182D63F1E /* Pods_HackathonApp.framework */; };
 		A24566C9276A35AF000DEC7F /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24566C8276A35AF000DEC7F /* RequestSubmissionViewController.swift */; };
 		CF669DAE2769FEEC00D83257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF669DAD2769FEEC00D83257 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1ACCBC276A678200FDF957 /* CommunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesCell.swift; sourceTree = "<group>"; };
 		4061B32EC020C94182D63F1E /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75415F13AF9A7E5407499867 /* Pods-HackathonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.debug.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.debug.xcconfig"; sourceTree = "<group>"; };
 		85A4E50551952CF8F4DA6834 /* Pods-HackathonApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.release.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				CF669DC3276A000000D83257 /* HomeViewController.swift */,
 				CF669DC5276A000E00D83257 /* ProfileViewController.swift */,
 				CF669DC7276A002500D83257 /* CommunitiesViewController.swift */,
+				1E1ACCBC276A678200FDF957 /* CommunitiesCell.swift */,
 				CF669DC9276A003000D83257 /* ContnetViewController.swift */,
 				A24566C8276A35AF000DEC7F /* RequestSubmissionViewController.swift */,
 			);
@@ -233,6 +236,7 @@
 				CF669DC22769FFF300D83257 /* SignUpViewController.swift in Sources */,
 				CF669DB02769FEEC00D83257 /* SceneDelegate.swift in Sources */,
 				A24566C9276A35AF000DEC7F /* RequestSubmissionViewController.swift in Sources */,
+				1E1ACCBD276A678200FDF957 /* CommunitiesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
