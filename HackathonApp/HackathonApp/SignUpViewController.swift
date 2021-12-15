@@ -52,6 +52,7 @@ class SignUpViewController: UIViewController {
         //MARK: - EmailTextField
         emailTextField.placeholder = "Enter your email"
         emailTextField.borderStyle = .roundedRect
+        emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
@@ -94,6 +95,7 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
             
             if error == nil {
+                
                 self.db.collection("Users")
                    .addDocument(data:
                                    [

@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         //MARK: - EmailTextField
         emailTextField.placeholder = "Enter your email"
         emailTextField.borderStyle = .roundedRect
+        emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
