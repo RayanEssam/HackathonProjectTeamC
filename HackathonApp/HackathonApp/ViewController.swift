@@ -123,14 +123,8 @@ class ViewController: UIViewController {
             
              
                 tabBarVC.setViewControllers([vc1,vc2,vc3,vc4], animated: true)
-=======
-                vc1.title = "Home"
-                vc2.title = "Contnet"
-                vc3.title = "Communities"
-                vc4.title = "Profile"
-                //
-                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4], animated: false)
->>>>>>> 88bccb2f8a6c00c9925d82914846a96c1ecb768c
+
+
                 
                 guard let items = tabBarVC.tabBar.items else {return}
                 
