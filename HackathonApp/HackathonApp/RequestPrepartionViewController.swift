@@ -1,9 +1,4 @@
-//
-//  RequestPrepartionViewController.swift
-//  HackathonApp
-//
-//  Created by Areej Mohammad on 11/05/1443 AH.
-//
+
 
 import UIKit
 
