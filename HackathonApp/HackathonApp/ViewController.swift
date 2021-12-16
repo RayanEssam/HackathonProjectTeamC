@@ -115,7 +115,8 @@ class ViewController: UIViewController {
                 let vc1 = UINavigationController(rootViewController: HomeViewController())
                 let vc2 = UINavigationController(rootViewController: CommunitiesViewController())
                 let vc3 = UINavigationController(rootViewController: ContnetViewController())
-                let vc4 = UINavigationController(rootViewController: ProfileViewController())
+                let vc4 = UINavigationController(rootViewController: RankingViewController())
+                let vc5 = UINavigationController(rootViewController: ProfileViewController())
                
                 
                
@@ -123,17 +124,18 @@ class ViewController: UIViewController {
                 vc1.title = "الملف الشخصي"
                 vc2.title = "المجتمعات"
                 vc3.title = "المحتوى"
-                vc4.title = "الرئيسية"
-              
+                vc4.title = "الترتيب"
+                vc5.title = "الرئيسية"
+                
             
              
-                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4], animated: true)
+                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
 
 
                 
                 guard let items = tabBarVC.tabBar.items else {return}
                 
-                let images = ["person.3","note.text","person.crop.circle","house"]
+                let images = ["house","person.3","note.text","airtag","person.crop.circle"]
                 
                 for i in 0..<items.count {
                     items[i].image = UIImage(systemName: images[i])
