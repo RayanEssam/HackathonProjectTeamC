@@ -37,7 +37,7 @@ class CommunitiesViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     print(data)
-                    let  description = data["Description "] as! String
+                    let  description = data["Description"] as! String
                     let name =  data["Name"] as! String
                     self.communitiesArray.append(Communities(name: name , describe: description))
                     print(self.communitiesArray)
@@ -90,9 +90,6 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         
     }
     
-        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 34
-        }
     
 }
 
