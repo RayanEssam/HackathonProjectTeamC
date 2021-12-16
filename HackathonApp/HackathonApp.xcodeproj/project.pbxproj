@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62F59EBF276B3096007A0E6F /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F59EBE276B3096007A0E6F /* RankingViewController.swift */; };
+		62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F59EC0276B3220007A0E6F /* RankingCell.swift */; };
 		62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F8091C276A7679007B2EC9 /* AppDelegate.swift */; };
 		62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F8091E276A7679007B2EC9 /* SceneDelegate.swift */; };
 		62F80921276A7679007B2EC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80920276A7679007B2EC9 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		02708901D540DA5D5D8E23DA /* Pods-HackathonApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.release.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.release.xcconfig"; sourceTree = "<group>"; };
 		40B79F26496DCD082DAA5DD6 /* Pods-HackathonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.debug.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.debug.xcconfig"; sourceTree = "<group>"; };
+		62F59EBE276B3096007A0E6F /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		62F59EC0276B3220007A0E6F /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		62F80919276A7679007B2EC9 /* HackathonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F8091C276A7679007B2EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F8091E276A7679007B2EC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				62F8093E276A7843007B2EC9 /* LocationsCell.swift */,
 				62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */,
 				62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */,
+				62F59EBE276B3096007A0E6F /* RankingViewController.swift */,
 				62F80925276A767A007B2EC9 /* Assets.xcassets */,
 				62F80927276A767A007B2EC9 /* LaunchScreen.storyboard */,
 				62F8092A276A767A007B2EC9 /* Info.plist */,
@@ -116,6 +121,7 @@
 				ADF6A714276B170F006E1629 /* VideoCell.swift */,
 				ADF6A716276B1753006E1629 /* ArticleCell.swift */,
 				ADF6A718276B17BE006E1629 /* SayingCell.swift */,
+				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
 				ADF6A71A276B183D006E1629 /* video.mp4 */,
 			);
 			path = HackathonApp;
@@ -248,6 +254,7 @@
 				62F80921276A7679007B2EC9 /* ViewController.swift in Sources */,
 				62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */,
 				62F8093B276A77F9007B2EC9 /* SignUpViewController.swift in Sources */,
+				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
 				ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */,
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
@@ -259,6 +266,7 @@
 				62F80935276A7757007B2EC9 /* ContnetViewController.swift in Sources */,
 				62F8093D276A781C007B2EC9 /* CommunitiesCell.swift in Sources */,
 				62F80937276A77A1007B2EC9 /* HomeViewController.swift in Sources */,
+				62F59EBF276B3096007A0E6F /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
