@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import Firebase
 
 class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     let specialneedsAndDonations = UIButton(frame: CGRect(x: 310, y: 60, width: 60, height: 60))
@@ -9,7 +10,10 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     let mapView = MKMapView(frame: CGRect(x: 15, y: 300, width: 360, height: 360))
     let submetButton = UIButton(frame: CGRect(x: 100, y: 670, width: 180, height: 31))
     let bgImage = UIImageView()
+    let db = Firestore.firestore()
     
+    var locationName = ""
+    var locationDescription = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -25,11 +29,13 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(bgImage)
 //        MARK: Labels:
         label1.font = UIFont(name: "Harmattan-Regular", size: 16)
-        label1.text = "Hello World"
+        label1.text = locationName
         label1.textColor = #colorLiteral(red: 0.09518901259, green: 0.3063969612, blue: 0.4679352641, alpha: 1)
         label1.textAlignment = .right
         view.addSubview(label1)
-        label2.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        label2.font = UIFont(name: "Harmattan-Regular", size: 16)
+        label2.text = locationDescription
+//        label2.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         label2.textColor = #colorLiteral(red: 0.09518901259, green: 0.3063969612, blue: 0.4679352641, alpha: 1)
         label2.textAlignment = .right
         view.addSubview(label2)
@@ -63,6 +69,24 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     }
     
     @objc func submetButtonPressed (){
+        
+        // Next page (For taking a picture and closing the order )
+        
+        db.collection("Orders").addDocument(data: [
+        
+            "email" : "\(Auth.auth().currentUser!.email!)",
+            "isCompleted" : false,
+            "locationName" : "\(locationName)"
+
+        ]) { error  in
+
+            if error == nil {
+             // move to the next page
+                print("Added successfully")
+                
+            }
+        }
+        
         
     }
 }

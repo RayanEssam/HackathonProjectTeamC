@@ -2,16 +2,19 @@
 
 import UIKit
 
-class RequestPrepartionViewController: UIViewController, UITableViewDataSource {
+class RequestPrepartionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let mySegmentedControl = UISegmentedControl (items: ["أماكن","أدوات"])
     let locationsTableView = UITableView()
     
-    var locationsArray = ["Areej" , "Aishah" , "Wejdan" , "Mona" , "Rayan" , "Abduallah" , "Ebrahim" , "Najlaa"]
     
-    var thingsAraay = ["اريج" , "عائشه" , "وجدان" , "منى"  , "ريان" , "عبدالله" , "ابراهيم" , "نجلاء"]
+    var displayArray :  [Any] = placesArr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationsTableView.delegate = self
+        locationsTableView.dataSource = self
+        
         
         // Segment
         let xPostion:CGFloat = 40
@@ -20,7 +23,7 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource {
         let elementHeight:CGFloat = 30
         
         mySegmentedControl.frame = CGRect(x: xPostion, y: yPostion, width: elementWidth, height: elementHeight)
-        mySegmentedControl.selectedSegmentIndex = 1
+        mySegmentedControl.selectedSegmentIndex = 0
         mySegmentedControl.backgroundColor = UIColor.white
         // Add function to handle Value Changed events
         mySegmentedControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
@@ -39,19 +42,72 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource {
     
     
     @objc func segmentedValueChanged(_ sender:UISegmentedControl!){
-//        if sender.selectedSegmentIndex == 0 {
-//
-//        }
+        if sender.selectedSegmentIndex == 0 {
+            displayArray = placesArr
+        }else{
+            displayArray = suppliesArr
+        }
+        locationsTableView.reloadData()
         
     }
     @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return locationsArray.count
+            return displayArray.count
     }
     @objc(tableView:cellForRowAtIndexPath:) func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = locationsArray[indexPath.row]
-        return cell
+        
+        
+        
+        //  Create cells from the places array
+        if mySegmentedControl.selectedSegmentIndex == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            cell.textLabel?.text = placesArr[indexPath.row] .name
+            return cell
+            
+        }else{
+            //  Create cells from the Supplies array
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            cell.textLabel?.text = suppliesArr[indexPath.row] .name
+            return cell
+            
+        }
+        
+      
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if mySegmentedControl.selectedSegmentIndex == 0 {
+           
+            let placeItem = tableView.cellForRow(at: indexPath)
+
+            let requestSubmmition = RequestSubmissionViewController()
+            
+            requestSubmmition.locationName = placesArr[indexPath.row] .name
+            requestSubmmition.locationDescription = placesArr[indexPath.row].description
+            requestSubmmition.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(requestSubmmition, animated: true)
+
+            
+        }else{
+       
+            let placeItem = tableView.cellForRow(at: indexPath)
+
+            let requestSubmmition = RequestSubmissionViewController()
+            requestSubmmition.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(requestSubmmition, animated: true)
+
+            
+            
+        }
+        
+  
+        
+    }
+    
+    
+    
+
+    
 }
 
 
