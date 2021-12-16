@@ -36,6 +36,7 @@ class CommunitiesViewController: UIViewController {
                 
                 for document in querySnapshot!.documents {
                     let data = document.data()
+                    print(document)
                     print(data)
                     let  description = data["Description"] as! String
                     let name =  data["Name"] as! String
@@ -73,6 +74,7 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         cell.labelName.text = communitiesArray[indexPath.row].name
         cell.labelDescraption.text = communitiesArray[indexPath.row].describe
         cell.joinButton.setTitle("الانضمام", for: .normal)
+     
         cell .layer.cornerRadius = 20
         cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         
