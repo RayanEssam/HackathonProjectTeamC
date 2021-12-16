@@ -57,6 +57,7 @@ class SignUpViewController: UIViewController {
         //MARK: - EmailTextField
         emailTextField.placeholder = " الايميل"
         emailTextField.textAlignment = .right
+        emailTextField.autocapitalizationType = .none
         emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)

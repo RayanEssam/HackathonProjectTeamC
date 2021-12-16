@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         view.addSubview(title1)
         //MARK: - EmailTextField
         emailTextField.placeholder = "الايميل"
+        emailTextField.autocapitalizationType = .none
         emailTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
         emailTextField.customTextfield()
         emailTextField.textAlignment = .right
