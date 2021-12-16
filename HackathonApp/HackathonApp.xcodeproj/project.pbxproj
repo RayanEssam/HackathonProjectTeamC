@@ -25,6 +25,7 @@
 		62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */; };
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		9578B5DB0FA671C42965ED73 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
+		AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */; };
 		ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A714276B170F006E1629 /* VideoCell.swift */; };
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
 		ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A718276B17BE006E1629 /* SayingCell.swift */; };
@@ -57,6 +58,7 @@
 		62F8093E276A7843007B2EC9 /* LocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrepartionViewController.swift; sourceTree = "<group>"; };
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
+		AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollingCell.swift; sourceTree = "<group>"; };
 		ADF6A714276B170F006E1629 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ADF6A718276B17BE006E1629 /* SayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
 				ADF6A71A276B183D006E1629 /* video.mp4 */,
 				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
+				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */,
 				CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */,
 				62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */,
+				AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */,
 				CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */,
 				ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */,
 				62F80939276A77CC007B2EC9 /* ProfileViewController.swift in Sources */,

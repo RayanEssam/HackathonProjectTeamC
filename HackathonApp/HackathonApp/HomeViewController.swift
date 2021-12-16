@@ -8,6 +8,13 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let infoArray = ["سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها", "نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا اللامحدود على أن نصنع الفرق. مرحباً بكم في مبادرة السعودية الخضراء","سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها", "نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا اللامحدود على أن نصنع الفرق. مرحباً بكم في مبادرة السعودية الخضراء" ]
+    
+    var collectionView: UICollectionView!
+    var timer = Timer()
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,15 +63,41 @@ class HomeViewController: UIViewController {
         progressView.clipsToBounds = true
         view.addSubview(progressView)
         
-        let mainTextLabel = UILabel(frame: CGRect(x: 0, y: 250, width: 400, height:200))
-        //        mainTextLabel.center = view.center
-        mainTextLabel.textAlignment = .center
-        mainTextLabel.numberOfLines = 3
-        mainTextLabel.font = .boldSystemFont(ofSize: 30)
-        mainTextLabel.textColor =  .black
+        //        let mainTextLabel = UILabel(frame: CGRect(x: 0, y: 250, width: 400, height:200))
+        //        //        mainTextLabel.center = view.center
+        //        mainTextLabel.textAlignment = .center
+        //        mainTextLabel.numberOfLines = 0
+        //        mainTextLabel.font = .boldSystemFont(ofSize: 30)
+        //        mainTextLabel.textColor =  .black
         //        mainTextLabel.backgroundColor = UIColor(patternImage: UIImage(named: "back")!)
-                mainTextLabel.text = "سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها"
-      
+        //                mainTextLabel.text = "سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها"
+        
+        collectionView = {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let cv = UICollectionView(frame: CGRect(x: 0, y: 300, width: 400, height: 120), collectionViewLayout: layout)
+            cv.isPagingEnabled = true
+            cv.showsHorizontalScrollIndicator = false
+            layout.itemSize = CGSize(width: 240, height: 120)
+            layout.minimumInteritemSpacing = 50
+            return cv
+        }()
+        
+        view.addSubview(collectionView)
+        
+        collectionView.register(AutoScrollingCell.self, forCellWithReuseIdentifier: "cellID")
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        let pageControl = UIPageControl()
+        pageControl.frame = CGRect(x: 100, y: 250, width: 100, height: 30)
+        pageControl.numberOfPages = infoArray.count
+        pageControl.currentPage = 0
+        view.addSubview(pageControl)
+        
+        // setting the timer for collection view
+        timer = Timer.scheduledTimer(timeInterval: 1.3, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
         
         
         
@@ -79,7 +112,7 @@ class HomeViewController: UIViewController {
         //        view.backgroundColor =  UIColor(patternImage: UIImage(named: "p17")!)
         view.backgroundColor = .white
         
-        view.addSubview(mainTextLabel)
+        //        view.addSubview(mainTextLabel)
         //        view.addSubview(targetTextLabel)
         
     }
@@ -93,8 +126,45 @@ class HomeViewController: UIViewController {
         
     }
     
-    
-    
+    @objc func scrollToNextCell(){
+        if counter < infoArray.count - 1{
+            counter += 1
+        }
+        else {
+            counter = 0
+        }
+        collectionView.scrollToItem(at: IndexPath(item: counter, section: 0), at: .left, animated: true)
+        
+    }
 }
 
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return infoArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! AutoScrollingCell
+        
+        cell.info.text = infoArray[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension UICollectionView {
+    func scrollToNextItem() {
+        let contentOffset = CGFloat(floor(self.contentOffset.x + self.bounds.size.width))
+        self.moveToFrame(contentOffset: contentOffset)
+    }
+    
+    func scrollToPreviousItem() {
+        let contentOffset = CGFloat(floor(self.contentOffset.x - self.bounds.size.width))
+        self.moveToFrame(contentOffset: contentOffset)
+    }
+    
+    func moveToFrame(contentOffset : CGFloat) {
+        self.setContentOffset(CGPoint(x: contentOffset, y: self.contentOffset.y), animated: true)
+    }
+}
 
