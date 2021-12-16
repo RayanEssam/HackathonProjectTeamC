@@ -10,7 +10,7 @@ import AVKit
 
 class VideoCell: UICollectionViewCell {
     
-    let cellID = "vidCell"
+    let cellID = "videoID"
     
     var player : AVPlayer!
     

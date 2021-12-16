@@ -8,7 +8,7 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource {
     
     var locationsArray = ["Areej" , "Aishah" , "Wejdan" , "Mona" , "Rayan" , "Abduallah" , "Ebrahim" , "Najlaa"]
     
-    var thingsAraay = ["اريج" , "عايشه" , "وجدان" , "منى"  , "ريان" , "عبدالله" , "ابراهيم" , "نجلاء"]
+    var thingsAraay = ["اريج" , "عائشه" , "وجدان" , "منى"  , "ريان" , "عبدالله" , "ابراهيم" , "نجلاء"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
