@@ -26,6 +26,7 @@
 		ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A714276B170F006E1629 /* VideoCell.swift */; };
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
 		ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A718276B17BE006E1629 /* SayingCell.swift */; };
+		ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ADF6A718276B17BE006E1629 /* SayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingCell.swift; sourceTree = "<group>"; };
 		ADF6A71A276B183D006E1629 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
 		BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				ADF6A716276B1753006E1629 /* ArticleCell.swift */,
 				ADF6A718276B17BE006E1629 /* SayingCell.swift */,
 				ADF6A71A276B183D006E1629 /* video.mp4 */,
+				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */,
 				62F80935276A7757007B2EC9 /* ContnetViewController.swift in Sources */,
 				62F8093D276A781C007B2EC9 /* CommunitiesCell.swift in Sources */,
+				ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */,
 				62F80937276A77A1007B2EC9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
