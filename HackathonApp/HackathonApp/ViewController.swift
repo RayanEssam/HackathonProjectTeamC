@@ -133,7 +133,7 @@ class ViewController: UIViewController {
                 
                 guard let items = tabBarVC.tabBar.items else {return}
                 
-                let images = ["house","person.3","note.text","person.crop.circle" ]
+                let images = ["person.3","note.text","person.crop.circle","house"]
                 
                 for i in 0..<items.count {
                     items[i].image = UIImage(systemName: images[i])
