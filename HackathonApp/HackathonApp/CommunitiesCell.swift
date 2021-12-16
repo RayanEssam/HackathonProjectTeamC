@@ -12,8 +12,8 @@ class CommunitiesCell: UITableViewCell {
    
         
         
-    var labelName = UILabel(frame: CGRect(x: 106, y: 11,  width: 350, height: 15 ))
-        var labelDescraption  = UILabel(frame: CGRect(x: 106, y: 69 , width: 254 , height: 25 ))
+    var labelName = UILabel(frame: CGRect(x: 144, y: 20,  width: 226 , height: 15 ))
+        var labelDescraption  = UILabel(frame: CGRect(x: 166, y: 30 , width: 204 , height: 80 ))
         var joinButton = UIButton(frame: CGRect(x:  16 , y: 34 , width: 83 , height: 40 ))
         
         override func awakeFromNib() {
@@ -29,9 +29,13 @@ class CommunitiesCell: UITableViewCell {
             contentView.addSubview(labelName)
             contentView.addSubview(labelDescraption)
             contentView.addSubview(joinButton)
+            
+            labelName.textAlignment = .right
+            
+            labelDescraption.numberOfLines = 3
+            labelDescraption.textAlignment = .right
+            
             joinButton.addTarget(self, action: #selector(join), for: .touchDown)
-            
-            
             joinButton.layer.cornerRadius = 20
             joinButton.backgroundColor = #colorLiteral(red: 0, green: 0.3955854177, blue: 0, alpha: 0.6980392157)
             
