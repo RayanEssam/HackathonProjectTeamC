@@ -23,12 +23,18 @@
 		62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */; };
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		9578B5DB0FA671C42965ED73 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
-
 		ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A714276B170F006E1629 /* VideoCell.swift */; };
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
 		ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A718276B17BE006E1629 /* SayingCell.swift */; };
 		ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */; };
-
+		CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */; };
+		CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */; };
+		CFBC7411276B601200806B02 /* MarkaziText-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740C276B601100806B02 /* MarkaziText-VariableFont_wght.ttf */; };
+		CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */; };
+		CFBC7413276B601200806B02 /* Changa-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740E276B601100806B02 /* Changa-VariableFont_wght.ttf */; };
+		CFBC7414276B601200806B02 /* Harmattan-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740F276B601200806B02 /* Harmattan-Bold.ttf */; };
+		CFBC7415276B601200806B02 /* Harmattan-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC7410276B601200806B02 /* Harmattan-Regular.ttf */; };
+		CFBC7417276B601D00806B02 /* BalooBhaijaan2-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC7416276B601D00806B02 /* BalooBhaijaan2-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,14 +57,20 @@
 		62F8093E276A7843007B2EC9 /* LocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrepartionViewController.swift; sourceTree = "<group>"; };
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
-
 		ADF6A714276B170F006E1629 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ADF6A718276B17BE006E1629 /* SayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingCell.swift; sourceTree = "<group>"; };
 		ADF6A71A276B183D006E1629 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
-
 		BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
+		CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldsDesign.swift; sourceTree = "<group>"; };
+		CFBC740C276B601100806B02 /* MarkaziText-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MarkaziText-VariableFont_wght.ttf"; path = "../../../../../Downloads/MarkaziText-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Bold .ttf"; sourceTree = "<group>"; };
+		CFBC740E276B601100806B02 /* Changa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Changa-VariableFont_wght.ttf"; path = "../../../../../Downloads/Changa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		CFBC740F276B601200806B02 /* Harmattan-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Harmattan-Bold.ttf"; path = "../../../../../Downloads/Harmattan-Bold.ttf"; sourceTree = "<group>"; };
+		CFBC7410276B601200806B02 /* Harmattan-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Harmattan-Regular.ttf"; path = "../../../../../Downloads/Harmattan-Regular.ttf"; sourceTree = "<group>"; };
+		CFBC7416276B601D00806B02 /* BalooBhaijaan2-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BalooBhaijaan2-VariableFont_wght.ttf"; path = "../../../../../Downloads/BalooBhaijaan2-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +145,8 @@
 		A288E876276B2DAA00887F01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A288E874276B172B00887F01 /* TextfieldsDesign.swift */,
-				A288E877276B2E1C00887F01 /* ButtonsDesign.swift */,
+				CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */,
+				CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,11 +154,12 @@
 		A288E879276B4C8500887F01 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A288E87A276B4C9F00887F01 /* BalooBhaijaan2-VariableFont_wght.ttf */,
-				A288E87B276B4CB000887F01 /* Changa-VariableFont_wght.ttf */,
-				A288E87D276B4CC800887F01 /* Harmattan-Bold.ttf */,
-				A288E87C276B4CC800887F01 /* Harmattan-Regular.ttf */,
-				A288E87E276B4CD100887F01 /* MarkaziText-VariableFont_wght.ttf */,
+				CFBC740E276B601100806B02 /* Changa-VariableFont_wght.ttf */,
+				CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */,
+				CFBC7416276B601D00806B02 /* BalooBhaijaan2-VariableFont_wght.ttf */,
+				CFBC740F276B601200806B02 /* Harmattan-Bold.ttf */,
+				CFBC7410276B601200806B02 /* Harmattan-Regular.ttf */,
+				CFBC740C276B601100806B02 /* MarkaziText-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -219,9 +232,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBC7417276B601D00806B02 /* BalooBhaijaan2-VariableFont_wght.ttf in Resources */,
+				CFBC7415276B601200806B02 /* Harmattan-Regular.ttf in Resources */,
+				CFBC7411276B601200806B02 /* MarkaziText-VariableFont_wght.ttf in Resources */,
 				62F80929276A767A007B2EC9 /* LaunchScreen.storyboard in Resources */,
 				62F80933276A773F007B2EC9 /* GoogleService-Info.plist in Resources */,
+				CFBC7413276B601200806B02 /* Changa-VariableFont_wght.ttf in Resources */,
+				CFBC7414276B601200806B02 /* Harmattan-Bold.ttf in Resources */,
 				62F80926276A767A007B2EC9 /* Assets.xcassets in Resources */,
+				CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +301,13 @@
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
 				ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */,
+				CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */,
 				62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */,
+				CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */,
 				ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */,
 				62F80939276A77CC007B2EC9 /* ProfileViewController.swift in Sources */,
 				62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */,
-				A288E878276B2E1C00887F01 /* ButtonsDesign.swift in Sources */,
 				62F80935276A7757007B2EC9 /* ContnetViewController.swift in Sources */,
-				A288E875276B172B00887F01 /* TextfieldsDesign.swift in Sources */,
 				62F8093D276A781C007B2EC9 /* CommunitiesCell.swift in Sources */,
 				ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */,
 				62F80937276A77A1007B2EC9 /* HomeViewController.swift in Sources */,
