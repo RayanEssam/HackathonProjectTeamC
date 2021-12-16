@@ -30,21 +30,25 @@ class ViewController: UIViewController {
         view.addSubview(title1)
         //MARK: - EmailTextField
         emailTextField.placeholder = "الايميل"
+        emailTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        emailTextField.customTextfield()
         emailTextField.textAlignment = .right
-        emailTextField.borderStyle = .roundedRect
+//        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = "كلمة السر"
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
         passwordTextField.textAlignment = .right
-        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.customTextfield()
+//        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - HidePasswordButton
         showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-        showPasswordButton.tintColor = .gray
+        showPasswordButton.tintColor = #colorLiteral(red: 0.3152361512, green: 0.7147678137, blue: 0.6022301912, alpha: 1)
         showPasswordButton.frame = CGRect(x: 20, y: 287, width: 60, height: 60)
         showPasswordButton.addTarget(self, action: #selector(hidePassword), for: .touchUpInside)
         view.addSubview(showPasswordButton)

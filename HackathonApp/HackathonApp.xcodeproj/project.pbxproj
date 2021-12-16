@@ -23,6 +23,8 @@
 		62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */; };
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		9578B5DB0FA671C42965ED73 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
+		A288E875276B172B00887F01 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288E874276B172B00887F01 /* TextfieldsDesign.swift */; };
+		A288E878276B2E1C00887F01 /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288E877276B2E1C00887F01 /* ButtonsDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,13 @@
 		62F8093E276A7843007B2EC9 /* LocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrepartionViewController.swift; sourceTree = "<group>"; };
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
+		A288E874276B172B00887F01 /* TextfieldsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldsDesign.swift; sourceTree = "<group>"; };
+		A288E877276B2E1C00887F01 /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
+		A288E87A276B4C9F00887F01 /* BalooBhaijaan2-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaijaan2-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		A288E87B276B4CB000887F01 /* Changa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Changa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		A288E87C276B4CC800887F01 /* Harmattan-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Regular.ttf"; sourceTree = "<group>"; };
+		A288E87D276B4CC800887F01 /* Harmattan-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Bold.ttf"; sourceTree = "<group>"; };
+		A288E87E276B4CD100887F01 /* MarkaziText-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +99,8 @@
 		62F8091B276A7679007B2EC9 /* HackathonApp */ = {
 			isa = PBXGroup;
 			children = (
+				A288E879276B4C8500887F01 /* Fonts */,
+				A288E876276B2DAA00887F01 /* Extensions */,
 				62F8091C276A7679007B2EC9 /* AppDelegate.swift */,
 				62F8091E276A7679007B2EC9 /* SceneDelegate.swift */,
 				62F80920276A7679007B2EC9 /* ViewController.swift */,
@@ -108,6 +119,27 @@
 				62F80932276A773F007B2EC9 /* GoogleService-Info.plist */,
 			);
 			path = HackathonApp;
+			sourceTree = "<group>";
+		};
+		A288E876276B2DAA00887F01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A288E874276B172B00887F01 /* TextfieldsDesign.swift */,
+				A288E877276B2E1C00887F01 /* ButtonsDesign.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A288E879276B4C8500887F01 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A288E87A276B4C9F00887F01 /* BalooBhaijaan2-VariableFont_wght.ttf */,
+				A288E87B276B4CB000887F01 /* Changa-VariableFont_wght.ttf */,
+				A288E87D276B4CC800887F01 /* Harmattan-Bold.ttf */,
+				A288E87C276B4CC800887F01 /* Harmattan-Regular.ttf */,
+				A288E87E276B4CD100887F01 /* MarkaziText-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B4C062CD30E7D439ADA4DAEB /* Frameworks */ = {
@@ -242,7 +274,9 @@
 				62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */,
 				62F80939276A77CC007B2EC9 /* ProfileViewController.swift in Sources */,
 				62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */,
+				A288E878276B2E1C00887F01 /* ButtonsDesign.swift in Sources */,
 				62F80935276A7757007B2EC9 /* ContnetViewController.swift in Sources */,
+				A288E875276B172B00887F01 /* TextfieldsDesign.swift in Sources */,
 				62F8093D276A781C007B2EC9 /* CommunitiesCell.swift in Sources */,
 				62F80937276A77A1007B2EC9 /* HomeViewController.swift in Sources */,
 			);
@@ -393,6 +427,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,6 +456,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
