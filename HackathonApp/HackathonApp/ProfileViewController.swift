@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
     let NameLable = UILabel()
     let scoreLable = UILabel()
     let numberOfTreesLable = UILabel()
+    let tracking = UIButton()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +28,20 @@ class ProfileViewController: UIViewController {
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
         let largeBoldArrow = UIImage(systemName: "rectangle.portrait.and.arrow.right", withConfiguration: largeConfig)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: largeBoldArrow, style: .plain, target: self, action: #selector(signOut))
-        navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
+        navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         //MARK: - SeparatorLine
         lineView.backgroundColor = #colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)
         lineView.frame = CGRect(x: 0 , y: 90, width: view.frame.size.width, height: 3)
         view.addSubview(lineView)
         //MARK: - ProfileImage
         profileImage.image = UIImage(systemName: "person.crop.circle")
-        profileImage.frame = CGRect(x: 148, y: 150, width: 100, height: 100)
-        profileImage.tintColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
+        profileImage.frame = CGRect(x: 25, y: 150, width: 100, height: 100)
+        profileImage.tintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         view.addSubview(profileImage)
         //MARK: - EmailLabel
        
-        NameLable.textColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
-        NameLable.frame = CGRect(x: 125, y: 250, width: 120, height: 50)
+        NameLable.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        NameLable.frame = CGRect(x: 80, y: 180, width: 120, height: 50)
         NameLable.font = .systemFont(ofSize: 25, weight: .semibold)
         NameLable.textAlignment = .right
         view.addSubview(NameLable)
@@ -47,32 +49,40 @@ class ProfileViewController: UIViewController {
         
         
         scoreLable.text = "الدرجه"
-        scoreLable.textColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
-        scoreLable.frame = CGRect(x: 270, y: 450, width: 120, height: 50)
-        scoreLable.font = .systemFont(ofSize: 25, weight: .semibold)
+        scoreLable.layer.masksToBounds = true
+        scoreLable.layer.cornerRadius = 15
+        scoreLable.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        scoreLable.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        scoreLable.frame = CGRect(x: 20, y: 400, width: 350, height: 40)
+        scoreLable.font = .systemFont(ofSize: 20, weight: .semibold)
         scoreLable.textAlignment = .center
         view.addSubview(scoreLable)
         
         
         numberOfTreesLable.text = "عدد الاشجار"
-        numberOfTreesLable.textColor = #colorLiteral(red: 0.867621541, green: 0.1653445661, blue: 0.2664638758, alpha: 1)
-        numberOfTreesLable.frame = CGRect(x: 200, y: 520, width: 230, height: 50)
-        numberOfTreesLable.font = .systemFont(ofSize: 25, weight: .semibold)
+        numberOfTreesLable.layer.masksToBounds = true
+        numberOfTreesLable.layer.cornerRadius = 15
+        numberOfTreesLable.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        numberOfTreesLable.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        numberOfTreesLable.frame = CGRect(x: 20, y: 340, width: 350, height: 40)
+        numberOfTreesLable.font = .systemFont(ofSize: 20, weight: .semibold)
         numberOfTreesLable.textAlignment = .center
         view.addSubview(numberOfTreesLable)
-        
-        
-        
-        
-        
-        
         getData()
         
-        
-        
-        
-        
-        
+        tracking.setTitle("تتبع الطلب", for: .normal)
+        tracking.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        tracking.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
+        tracking.layer.cornerRadius = 15
+        tracking.frame = CGRect(x: 20, y: 460, width: 350, height: 40)
+        tracking.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
+        view.addSubview(tracking)
+        //
+        let treeimage = UIImageView()
+        treeimage.image = UIImage(named: "p16")
+        treeimage.frame = CGRect(x: 25, y: 600, width: 350, height: 100)
+        treeimage.contentMode = .scaleAspectFill
+        view.addSubview(treeimage)
     }
     //MARK: - Methods
     @objc func signOut() {
