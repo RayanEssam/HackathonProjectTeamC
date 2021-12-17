@@ -9,7 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let infoArray = ["سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها", "نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا اللامحدود على أن نصنع الفرق. مرحباً بكم في مبادرة السعودية الخضراء","سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها", "نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا اللامحدود على أن نصنع الفرق. مرحباً بكم في مبادرة السعودية الخضراء" ]
+    let infoArray = [
+        "سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها .",
+        "نحن عازمون بطموحنا الكبير، وخبراتنا الواسعة، وإبداعنا اللامحدود على أن نصنع الفرق." ,
+        "نحن عازمون بطموحنا الكبير، و خبراتنا الواسعة، و إبداعنا اللامحدود على أن نصنع الفرق. مرحباً بكم    في مبادرة السعودية الخضراء ."]
     
     var collectionView: UICollectionView!
     var timer = Timer()
@@ -27,7 +30,7 @@ class HomeViewController: UIViewController {
         //
         let firstlabel = UILabel()
         firstlabel.text = "تم زراعة ١٠ ملايين شجرة"
-        firstlabel.frame = CGRect(x: 25, y: 100 , width:350, height: 25)
+        firstlabel.frame = CGRect(x: 25, y: 120 , width:350, height: 25)
         firstlabel.textAlignment = .center
         firstlabel.textColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
         firstlabel.font = .boldSystemFont(ofSize: 30)
@@ -35,7 +38,7 @@ class HomeViewController: UIViewController {
         
         let secondlabel = UILabel()
         secondlabel.text = "٩.٩٩ مليار شجرة متبقية"
-        secondlabel.frame = CGRect(x: 25, y: 150 , width: 350, height: 25)
+        secondlabel.frame = CGRect(x: 25, y: 165 , width: 350, height: 25)
         secondlabel.textAlignment = .center
         secondlabel.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         secondlabel.font = .systemFont(ofSize: 17)
@@ -53,7 +56,7 @@ class HomeViewController: UIViewController {
         targetTextLabel.text = "٤٠ مليار شجرة"
         
         let progressView = UIProgressView(progressViewStyle: .bar)
-        progressView.frame = CGRect(x: 20, y: 200, width: 345, height: 45)
+        progressView.frame = CGRect(x: 20, y: 220, width: 345, height: 45)
         //        progressView.center = view.center
         progressView.transform = CGAffineTransform(scaleX: 1, y: 6)
         progressView.setProgress(0.3, animated: true)
@@ -63,22 +66,14 @@ class HomeViewController: UIViewController {
         progressView.clipsToBounds = true
         view.addSubview(progressView)
         
-        //        let mainTextLabel = UILabel(frame: CGRect(x: 0, y: 250, width: 400, height:200))
-        //        //        mainTextLabel.center = view.center
-        //        mainTextLabel.textAlignment = .center
-        //        mainTextLabel.numberOfLines = 0
-        //        mainTextLabel.font = .boldSystemFont(ofSize: 30)
-        //        mainTextLabel.textColor =  .black
-        //        mainTextLabel.backgroundColor = UIColor(patternImage: UIImage(named: "back")!)
-        //                mainTextLabel.text = "سنقود الحقبة الخضراء القادمة داخل المملكة وخارجها"
-        
         collectionView = {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             let cv = UICollectionView(frame: CGRect(x: 0, y: 300, width: 400, height: 120), collectionViewLayout: layout)
             cv.isPagingEnabled = true
             cv.showsHorizontalScrollIndicator = false
-            layout.itemSize = CGSize(width: 240, height: 120)
+            cv.semanticContentAttribute = .forceRightToLeft
+            layout.itemSize = CGSize(width: view.frame.width, height: 120)
             layout.minimumInteritemSpacing = 50
             return cv
         }()
@@ -91,15 +86,14 @@ class HomeViewController: UIViewController {
         collectionView.delegate = self
         
         let pageControl = UIPageControl()
-        pageControl.frame = CGRect(x: 100, y: 250, width: 100, height: 30)
+        pageControl.frame = CGRect(x: 100, y: 450, width: 100, height: 30)
         pageControl.numberOfPages = infoArray.count
         pageControl.currentPage = 0
+        pageControl.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         view.addSubview(pageControl)
         
         // setting the timer for collection view
-        timer = Timer.scheduledTimer(timeInterval: 1.3, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
-        
-        
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
         
         let mainActionButton = UIButton(frame: CGRect(x: 20, y: 700, width: 345, height: 40))
         mainActionButton.setTitle("اغرسها", for: .normal)
@@ -123,18 +117,18 @@ class HomeViewController: UIViewController {
         requestVC.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(requestVC, animated: true)
         
-        
     }
     
     @objc func scrollToNextCell(){
-        if counter < infoArray.count - 1{
+        if counter < infoArray.count {
+            collectionView.scrollToItem(at: IndexPath(item: counter, section: 0), at: .centeredHorizontally, animated: true)
             counter += 1
         }
         else {
             counter = 0
+            collectionView.scrollToItem(at: IndexPath(item: counter, section: 0), at: .centeredHorizontally, animated: true)
+
         }
-        collectionView.scrollToItem(at: IndexPath(item: counter, section: 0), at: .left, animated: true)
-        
     }
 }
 
@@ -167,4 +161,3 @@ extension UICollectionView {
         self.setContentOffset(CGPoint(x: contentOffset, y: self.contentOffset.y), animated: true)
     }
 }
-
