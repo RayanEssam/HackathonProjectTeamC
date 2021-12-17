@@ -12,6 +12,8 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     let bgImage = UIImageView()
     let db = Firestore.firestore()
     
+    let orderID = UUID()
+    
     var locationName = ""
     var locationDescription = ""
     override func viewDidLoad() {
@@ -71,26 +73,30 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     }
     
     @objc func submetButtonPressed (){
-        
-        // Next page (For taking a picture and closing the order )
-        
-        db.collection("Orders").addDocument(data: [
-        
-            "email" : "\(Auth.auth().currentUser!.email!)",
-            "isCompleted" : false,
-            "locationName" : "\(locationName)"
-
-        ]) { error  in
-
-            if error == nil {
-             // move to the next page
-                print("Added successfully")
+            
+            // Next page (For taking a picture and closing the order )
+            
+            db.collection("Orders").document("\(orderID)").setData([
+            
+                "email" : "\(Auth.auth().currentUser!.email!)",
+                "isCompleted" : false,
+                "locationName" : "\(locationName)",
+                "nuberOfTrees" : "0"
                 
+            ]) { error  in
+
+                if error == nil {
+                 // move to the next page
+                    print("Added successfully")
+                    
+                }
             }
+            let requestConfirmation = RequestConfirmationViewController()
+            requestConfirmation.orderID = self.orderID
+                    requestConfirmation.modalPresentationStyle = .fullScreen
+                    navigationController?.pushViewController(requestConfirmation, animated: true)
+            
         }
-        
-        
-    }
 }
 
 

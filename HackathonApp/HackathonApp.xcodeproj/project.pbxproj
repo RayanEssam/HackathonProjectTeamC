@@ -28,6 +28,7 @@
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		82D4D992276C9E9800EAFDC4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D4D991276C9E9800EAFDC4 /* data.json */; };
 		82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */; };
+		AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */; };
 		AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */; };
 		ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A714276B170F006E1629 /* VideoCell.swift */; };
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
@@ -66,6 +67,7 @@
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
 		82D4D991276C9E9800EAFDC4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchScreen.swift; sourceTree = "<group>"; };
+		AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfirmationViewController.swift; sourceTree = "<group>"; };
 		AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollingCell.swift; sourceTree = "<group>"; };
 		ADF6A714276B170F006E1629 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				62F8093E276A7843007B2EC9 /* LocationsCell.swift */,
 				62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */,
 				62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */,
+				AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */,
 				62F59EBE276B3096007A0E6F /* RankingViewController.swift */,
 				62F80925276A767A007B2EC9 /* Assets.xcassets */,
 				62F80927276A767A007B2EC9 /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 				626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
 				ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */,
+				AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */,
 				CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */,
 				62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */,
 				AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */,
