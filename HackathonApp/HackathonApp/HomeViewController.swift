@@ -60,8 +60,8 @@ class HomeViewController: UIViewController {
         //        progressView.center = view.center
         progressView.transform = CGAffineTransform(scaleX: 1, y: 6)
         progressView.setProgress(0.3, animated: true)
-        progressView.trackTintColor = .white
-        progressView.tintColor =  #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        progressView.trackTintColor = #colorLiteral(red: 0.5386510491, green: 0.7254061699, blue: 0.3467453718, alpha: 0.1717197848)
+        progressView.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         progressView.semanticContentAttribute = .forceRightToLeft
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
