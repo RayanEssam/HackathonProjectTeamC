@@ -35,7 +35,7 @@ class TabBarViewController: UITabBarController {
         
         guard let items = self.tabBar.items else {return}
         
-        let images = ["person.crop.circle","person.3","note.text","airtag","house"]
+        let images = ["house","person.3","note.text","airtag","person.crop.circle"]
         
         for i in 0..<items.count {
             items[i].image = UIImage(systemName: images[i])
