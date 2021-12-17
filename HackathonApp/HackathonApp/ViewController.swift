@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         if passwordTextField.isSecureTextEntry {
                    showPasswordButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
                } else {
-                   showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+                   showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
                }
     }
     
