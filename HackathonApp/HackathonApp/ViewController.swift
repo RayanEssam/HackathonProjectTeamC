@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         //MARK: - LoginButton
         loginButton.setTitle("تسجيل الدخول", for: .normal)
         loginButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        loginButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
+        loginButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         loginButton.layer.cornerRadius = 15
         loginButton.frame = CGRect(x: 20, y: 400, width: 350, height: 34)
         loginButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
@@ -93,6 +93,7 @@ class ViewController: UIViewController {
         imageD.frame = CGRect(x: 80, y: 500 , width: 250, height: 250)
         imageD.contentMode = .scaleAspectFill
         view.addSubview(imageD)
+        
     }
     //MARK: - Methods
     @objc func hidePassword() {
@@ -101,8 +102,8 @@ class ViewController: UIViewController {
     
     @objc func forgotPassword() {
         
-        //        let vc = ForgotPassVC()
-        //        present(vc, animated: true, completion: nil)
+                let vc = ForgotPasswordViewController()
+                present(vc, animated: true, completion: nil)
     }
     
     @objc func login() {
@@ -111,39 +112,7 @@ class ViewController: UIViewController {
             
             if error == nil {
                 
-                let tabBarVC = UITabBarController()
-                let vc1 = UINavigationController(rootViewController: HomeViewController())
-                let vc2 = UINavigationController(rootViewController: CommunitiesViewController())
-                let vc3 = UINavigationController(rootViewController: ContnetViewController())
-                let vc4 = UINavigationController(rootViewController: RankingViewController())
-                let vc5 = UINavigationController(rootViewController: ProfileViewController())
-               
-                
-               
-                
-                vc1.title = "الملف الشخصي"
-                vc2.title = "المجتمعات"
-                vc3.title = "المحتوى"
-                vc4.title = "الترتيب"
-                vc5.title = "الرئيسية"
-                
-            
-             
-                tabBarVC.setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
-
-
-                
-                guard let items = tabBarVC.tabBar.items else {return}
-                
-                let images = ["house","person.3","note.text","airtag","person.crop.circle"]
-                
-                for i in 0..<items.count {
-                    items[i].image = UIImage(systemName: images[i])
-                }
-                
-                tabBarVC.tabBar.backgroundColor = .white
-                tabBarVC.tabBar.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-                tabBarVC.modalPresentationStyle = .fullScreen
+                let tabBarVC = TabBarViewController()
                 self.present(tabBarVC, animated: true, completion: nil)
                 
                 
