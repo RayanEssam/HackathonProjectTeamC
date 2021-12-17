@@ -38,21 +38,21 @@ class SignUpViewController: UIViewController {
         title1.text = "شاركنا .. لنغرسها"
         title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         title1.textAlignment = .center
-        title1.frame = CGRect(x: 28, y: 150, width: 350, height: 50)
-        title1.font = .systemFont(ofSize: 50, weight: .semibold)
+        title1.frame = CGRect(x: 28, y: 120, width: 350, height: 50)
+        title1.font = .systemFont(ofSize: 25, weight: .semibold)
         view.addSubview(title1)
         //MARK: - NameTextField
         nameTextField.placeholder = "الاسم"
         nameTextField.textAlignment = .right
         nameTextField.borderStyle = .roundedRect
-        nameTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
+        nameTextField.frame = CGRect(x: 20, y: 200, width: 350, height: 34)
         view.addSubview(nameTextField)
 
         //MARK: - IDTextField
         idTextField.placeholder = "رقم الهوية"
         idTextField.textAlignment = .right
         idTextField.borderStyle = .roundedRect
-        idTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
+        idTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(idTextField)
         //MARK: - EmailTextField
         emailTextField.placeholder = " الايميل"
@@ -60,21 +60,21 @@ class SignUpViewController: UIViewController {
         emailTextField.autocapitalizationType = .none
         emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
-        emailTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
+        emailTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = " كلمة السر"
         passwordTextField.textAlignment = .right
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.frame = CGRect(x: 20, y: 400, width: 350, height: 34)
+        passwordTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - SignUpButton
         signUpButton.setTitle("انشاء حساب", for: .normal)
         signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
-        signUpButton.frame = CGRect(x: 20, y: 450, width: 350, height: 34)
+        signUpButton.frame = CGRect(x: 20, y: 420, width: view.frame.width - 40, height: 34)
         signUpButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         view.addSubview(signUpButton)
@@ -95,6 +95,7 @@ class SignUpViewController: UIViewController {
         signInButton.frame = CGRect(x: 60, y: 763, width: 150, height: 34)
         signInButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+        signUpButton.createShadowButton()
         view.addSubview(signInButton)
         //
         imageD.image = UIImage(named: "p5")

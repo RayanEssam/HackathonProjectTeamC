@@ -15,23 +15,24 @@ class ForgotPasswordViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         //MARK: - EmailTextField
-        emailTextField.placeholder = "الإيميل"
+        emailTextField.placeholder = "البريد الإلكتروني"
         emailTextField.autocapitalizationType = .none
-        emailTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         emailTextField.customTextfield()
         emailTextField.textAlignment = .right
         emailTextField.textContentType = .emailAddress
-        emailTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
+        emailTextField.frame = CGRect(x: 20, y: 220, width: view.frame.width - 40, height: 34)
         view.addSubview(emailTextField)
         
         //MARK: - ResetPasswordButton
-        resetButton.setTitle("إعادة تعيين عبر الإيميل", for: .normal)
+        resetButton.setTitle( "إعادة تعيين من خلال البريد الإلكتروني" , for: .normal)
         resetButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         resetButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         resetButton.layer.cornerRadius = 15
-        resetButton.frame = CGRect(x: 20, y: 400, width: 350, height: 34)
+        resetButton.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
         resetButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         resetButton.addTarget(self, action: #selector(resetLink), for: .touchUpInside)
+        resetButton.createShadowButton()
         view.addSubview(resetButton)
     }
     

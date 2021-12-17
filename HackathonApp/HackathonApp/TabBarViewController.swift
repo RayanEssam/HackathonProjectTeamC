@@ -27,7 +27,7 @@ class TabBarViewController: UITabBarController {
         vc4.title = "الترتيب"
         vc5.title = "الملف الشخصي"
         
-    
+        self.tabBar.semanticContentAttribute = .forceRightToLeft
      
         self.setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
 

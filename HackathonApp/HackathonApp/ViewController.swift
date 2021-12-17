@@ -21,35 +21,35 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         hideKeyboardWhenTappedAround()
         //
-        title1.text = "« إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها » "
+        title1.text = "« إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها »"
         title1.numberOfLines = 3
         title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         title1.textAlignment = .center
         title1.frame = CGRect(x: 28, y: 100, width: 350, height: 150)
-        title1.font = .systemFont(ofSize: 25, weight: .semibold)
+        title1.font = .systemFont(ofSize: 23, weight: .semibold)
         view.addSubview(title1)
         //MARK: - EmailTextField
         emailTextField.placeholder = "الايميل"
         emailTextField.autocapitalizationType = .none
-        emailTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         emailTextField.customTextfield()
         emailTextField.textAlignment = .right
 //        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
-        emailTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
+        emailTextField.frame = CGRect(x: 20, y: 250, width: view.frame.width - 40, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = "كلمة السر"
-        passwordTextField.placeholderColor = #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         passwordTextField.textAlignment = .right
         passwordTextField.customTextfield()
 //        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
+        passwordTextField.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - HidePasswordButton
         showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-        showPasswordButton.tintColor = #colorLiteral(red: 0.3152361512, green: 0.7147678137, blue: 0.6022301912, alpha: 1)
+        showPasswordButton.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         showPasswordButton.frame = CGRect(x: 20, y: 287, width: 60, height: 60)
         showPasswordButton.addTarget(self, action: #selector(hidePassword), for: .touchUpInside)
         view.addSubview(showPasswordButton)
@@ -65,9 +65,10 @@ class ViewController: UIViewController {
         loginButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         loginButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         loginButton.layer.cornerRadius = 15
-        loginButton.frame = CGRect(x: 20, y: 400, width: 350, height: 34)
+        loginButton.frame = CGRect(x: 20, y: 400, width: view.frame.width - 40, height: 34)
         loginButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        loginButton.createShadowButton()
         view.addSubview(loginButton)
         //MARK: - SeparatorLine
         lineView.backgroundColor = #colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)

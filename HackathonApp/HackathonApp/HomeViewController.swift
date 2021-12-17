@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         progressView.setProgress(0.3, animated: true)
         progressView.trackTintColor = .white
         progressView.tintColor =  #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        progressView.semanticContentAttribute = .forceRightToLeft
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
         view.addSubview(progressView)
@@ -100,6 +101,7 @@ class HomeViewController: UIViewController {
         mainActionButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         mainActionButton.setTitleColor(.white, for: .normal)
         mainActionButton.layer.cornerRadius = 15
+        mainActionButton.createShadowButton()
         mainActionButton.addTarget(self, action: #selector(requestViewController), for: .touchUpInside)
         view.addSubview(mainActionButton)
         
