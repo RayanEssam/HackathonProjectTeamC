@@ -98,6 +98,11 @@ class ViewController: UIViewController {
     //MARK: - Methods
     @objc func hidePassword() {
         passwordTextField.isSecureTextEntry.toggle()
+        if passwordTextField.isSecureTextEntry {
+                   showPasswordButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+               } else {
+                   showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+               }
     }
     
     @objc func forgotPassword() {
