@@ -33,7 +33,8 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
         locationsTableView.frame = CGRect(x: 0, y: 150, width: 500, height:600 )
         locationsTableView.backgroundView?.backgroundColor = .blue
         locationsTableView.dataSource = self
-        locationsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+//        locationsTableView.register(LocationsCell.self, forCellReuseIdentifier: "Cell")
+        locationsTableView.register(LocationsCell.self, forCellReuseIdentifier: "LocationCell")
         
         view.backgroundColor = .white
         self.view.addSubview(mySegmentedControl)
@@ -59,20 +60,31 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
         
         //  Create cells from the places array
         if mySegmentedControl.selectedSegmentIndex == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = placesArr[indexPath.row] .name
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationsCell
+            cell.location.text = placesArr[indexPath.row] .name
+            cell.desciption.text = placesArr[indexPath.row].description
             return cell
             
         }else{
             //  Create cells from the Supplies array
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = suppliesArr[indexPath.row] .name
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationsCell
+            cell.location.text = suppliesArr[indexPath.row] .name
+            cell.desciption.text = suppliesArr[indexPath.row].description
             return cell
             
         }
         
       
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        
+        return 150
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

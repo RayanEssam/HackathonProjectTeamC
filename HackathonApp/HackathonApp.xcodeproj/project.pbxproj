@@ -28,8 +28,6 @@
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		82D4D992276C9E9800EAFDC4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D4D991276C9E9800EAFDC4 /* data.json */; };
 		82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */; };
-		82D4D997276CA0E400EAFDC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 82D4D996276CA0E400EAFDC4 /* Lottie */; };
-		9578B5DB0FA671C42965ED73 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
 		AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */; };
 		ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A714276B170F006E1629 /* VideoCell.swift */; };
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
@@ -39,6 +37,7 @@
 		CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */; };
 		CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */; };
 		CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */; };
+		CFBC7418276CAF5500806B02 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,8 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9578B5DB0FA671C42965ED73 /* Pods_HackathonApp.framework in Frameworks */,
-				82D4D997276CA0E400EAFDC4 /* Lottie in Frameworks */,
+				CFBC7418276CAF5500806B02 /* Pods_HackathonApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +198,6 @@
 			);
 			name = HackathonApp;
 			packageProductDependencies = (
-				82D4D996276CA0E400EAFDC4 /* Lottie */,
 			);
 			productName = HackathonApp;
 			productReference = 62F80919276A7679007B2EC9 /* HackathonApp.app */;
@@ -231,7 +228,6 @@
 			);
 			mainGroup = 62F80910276A7679007B2EC9;
 			packageReferences = (
-				82D4D995276CA0E400EAFDC4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 62F8091A276A7679007B2EC9 /* Products */;
 			projectDirPath = "";
@@ -542,25 +538,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		82D4D995276CA0E400EAFDC4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arejmohammad/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		82D4D996276CA0E400EAFDC4 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 82D4D995276CA0E400EAFDC4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62F80911276A7679007B2EC9 /* Project object */;
 }

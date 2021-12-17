@@ -18,16 +18,24 @@ var placesArr:[Places] = [
 
 var suppliesArr:[Supplies] = [
     
-    Supplies(name: "جامعة الأميرة نورة", description: "", coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "جامعة الملك سعود", description: "", coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "جامعة الامام محمد بن سعود", description: "", coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "أمانة منطقة الرياض", description: "", coord: Coordinates(long: 1000, lat: 1000))
+    Supplies(name: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", description: "بذور شجرة السدر", amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name: "جامعة الملك سعود", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name: "جامعة الامام محمد بن سعود", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name: "أمانة منطقة الرياض", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000))
 ]
 
 struct Supplies {
     var name:String
     var description:String
+    var amount : Int
     var coord : Coordinates
+}
+
+struct WaterContainer{
+    var name:String
+    var description:String
+    var coord : Coordinates
+    
 }
 
 
