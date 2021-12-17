@@ -10,6 +10,5 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
 pod 'lottie-ios'
-pod 'GoogleMaps', '6.0.1'
 
 end

@@ -1,8 +1,8 @@
 import UIKit
 import MapKit
 import Firebase
-import GoogleMaps
-import CoreLocation
+//import GoogleMaps
+//import CoreLocation
 
 class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     let specialneedsAndDonations = UIButton(frame: CGRect(x: 310, y: 60, width: 60, height: 60))
@@ -20,7 +20,7 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLo
     var locationName = ""
     var locationDescription = ""
     
-    let manager = CLLocationManager()
+//    let manager = CLLocationManager()
 
     
     override func viewDidLoad() {
@@ -31,13 +31,13 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLo
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            print("Family: \(family) Font names: \(names)")
         
-        GMSServices.provideAPIKey("AIzaSyDCKjBTJBxts5LKSpLmZm5JxE75jYwqgyw")
+//        GMSServices.provideAPIKey("AIzaSyDCKjBTJBxts5LKSpLmZm5JxE75jYwqgyw")
         
-        manager.delegate = self
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+//        manager.delegate = self
+//        manager.requestWhenInUseAuthorization()
+//        manager.startUpdatingLocation()
         
-        locationManager(manager, didUpdateLocations: [CLLocation(latitude: 24.858659, longitude: 46.710210)])
+//        locationManager(manager, didUpdateLocations: [CLLocation(latitude: 24.858659, longitude: 46.710210)])
 
 
 //        }
@@ -119,30 +119,30 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLo
     
     
     
-     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else{
-
-            return
-        }
-
-        let Latitude = 24.858659
-        let Longitude = 46.710210
-
-        let cordinat = location.coordinate
-        let camera = GMSCameraPosition.camera(withLatitude: Latitude, longitude: Longitude, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-         mapView.frame = CGRect(x: 0, y: 0, width: 360, height: 360)
-         self.map.addSubview(mapView)
-
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: Latitude, longitude: Longitude)
-        marker.title = "Riyadh"
-        marker.snippet = "princes Norah"
-        marker.map = mapView
-
-
-
-    }
+//     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let location = locations.first else{
+//
+//            return
+//        }
+//
+//        let Latitude = 24.858659
+//        let Longitude = 46.710210
+//
+//        let cordinat = location.coordinate
+//        let camera = GMSCameraPosition.camera(withLatitude: Latitude, longitude: Longitude, zoom: 6.0)
+//        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+//         mapView.frame = CGRect(x: 0, y: 0, width: 360, height: 360)
+//         self.map.addSubview(mapView)
+//
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2D(latitude: Latitude, longitude: Longitude)
+//        marker.title = "Riyadh"
+//        marker.snippet = "princes Norah"
+//        marker.map = mapView
+//
+//
+//
+//    }
     
     
     
