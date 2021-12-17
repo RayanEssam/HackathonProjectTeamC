@@ -121,6 +121,8 @@
 				62F8091C276A7679007B2EC9 /* AppDelegate.swift */,
 				62F8091E276A7679007B2EC9 /* SceneDelegate.swift */,
 				62F80920276A7679007B2EC9 /* ViewController.swift */,
+				626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */,
+				626DF77E276C9F0400E5A530 /* TabBarViewController.swift */,
 				62F80930276A771F007B2EC9 /* CommunitiesViewController.swift */,
 				62F80934276A7757007B2EC9 /* ContnetViewController.swift */,
 				B3558188276B7C16002CC012 /* Structs.swift */,
@@ -142,8 +144,6 @@
 				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
 				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
 				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
-				626DF77E276C9F0400E5A530 /* TabBarViewController.swift */,
-				626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
