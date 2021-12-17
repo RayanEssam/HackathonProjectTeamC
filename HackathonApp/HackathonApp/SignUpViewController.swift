@@ -126,6 +126,8 @@ class SignUpViewController: UIViewController {
                        }
                        
                    }
+                let tabBarVC = TabBarViewController()
+                self.present(tabBarVC, animated: true, completion: nil)
             } else {
                 print(error!.localizedDescription)
             }
