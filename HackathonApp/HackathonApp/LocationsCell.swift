@@ -9,8 +9,9 @@ import UIKit
 
 class LocationsCell: UITableViewCell {
     
-    let location = UILabel(frame: CGRect(x: 0, y: 30,  width: 370, height: 15 ))
-    let desciption = UILabel(frame: CGRect(x: 15, y: 60,  width: 360, height: 40 ))
+    let location = UILabel(frame: CGRect(x: 0, y: 30,  width: 360, height: 15 ))
+    let desciption = UILabel(frame: CGRect(x: 15, y: 60,  width: 350, height: 40 ))
+    let iconImage = UIImageView(image: UIImage(systemName: "location.fill"))
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -20,6 +21,9 @@ class LocationsCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+        iconImage.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        iconImage.frame = CGRect(x: 360, y: 30, width: 20, height: 20)
+        
         location.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         location.font = .boldSystemFont(ofSize: 18)
        
@@ -30,10 +34,10 @@ class LocationsCell: UITableViewCell {
         desciption.numberOfLines = 2
         desciption.text = "منتزه الملك سلمان البري ببنبان شمال مدينة الرياض"
         desciption.textAlignment = .right
-        desciption.backgroundColor = .red
+//        desciption.backgroundColor = .red
         contentView.addSubview(desciption)
             contentView.addSubview(location)
-
+        contentView.addSubview(iconImage)
     }
     
     
