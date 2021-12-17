@@ -21,11 +21,11 @@ class TabBarViewController: UITabBarController {
         
        
         
-        vc1.title = "الملف الشخصي"
+        vc1.title = "الرئيسية"
         vc2.title = "المجتمعات"
         vc3.title = "المحتوى"
         vc4.title = "الترتيب"
-        vc5.title = "الرئيسية"
+        vc5.title = "الملف الشخصي"
         
     
      
