@@ -1,13 +1,16 @@
 import UIKit
 import MapKit
 import Firebase
+import GoogleMaps
+import CoreLocation
 
-class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
+class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     let specialneedsAndDonations = UIButton(frame: CGRect(x: 310, y: 60, width: 60, height: 60))
     var label1 = UILabel(frame: CGRect(x: 15, y: 150, width: 360, height: 31))
     var label2 = UILabel(frame: CGRect(x: 15, y: 200, width: 360, height: 62))
     var label3 = UILabel(frame: CGRect(x: 15, y: 250, width: 360, height: 31))
-    let mapView = MKMapView(frame: CGRect(x: 15, y: 300, width: 360, height: 360))
+   // let mapView = MKMapView(frame: CGRect(x: 15, y: 300, width: 360, height: 360))
+    let map = UIView(frame: CGRect(x: 15, y: 300, width: 360, height: 360))
     let submetButton = UIButton(frame: CGRect(x: 100, y: 670, width: 180, height: 31))
     let bgImage = UIImageView()
     let db = Firestore.firestore()
@@ -16,6 +19,10 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
     
     var locationName = ""
     var locationDescription = ""
+    
+    let manager = CLLocationManager()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -23,6 +30,16 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
 //        for family in UIFont.familyNames.sorted() {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            print("Family: \(family) Font names: \(names)")
+        
+        GMSServices.provideAPIKey("AIzaSyDCKjBTJBxts5LKSpLmZm5JxE75jYwqgyw")
+        
+        manager.delegate = self
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        locationManager(manager, didUpdateLocations: [CLLocation(latitude: 24.858659, longitude: 46.710210)])
+
+
 //        }
         
 //        MARK: Image:
@@ -61,11 +78,13 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
         submetButton.addTarget(self, action: #selector(submetButtonPressed), for: .touchUpInside)
         view.addSubview(submetButton)
 //        MARK: Map:
-        mapView.mapType = MKMapType.standard
-        mapView.isZoomEnabled = true
-        mapView.isScrollEnabled = true
-        mapView.layer.cornerRadius = 13
-        view.addSubview(mapView)
+//        mapView.mapType = MKMapType.standard
+//        mapView.isZoomEnabled = true
+//        mapView.isScrollEnabled = true
+//        mapView.layer.cornerRadius = 13
+//        view.addSubview(mapView)
+        view.addSubview(map)
+        map.backgroundColor = .red
         
     }
     @objc func specialneedsAndDonationsPressed (){
@@ -97,6 +116,36 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate {
                     navigationController?.pushViewController(requestConfirmation, animated: true)
             
         }
+    
+    
+    
+     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else{
+
+            return
+        }
+
+        let Latitude = 24.858659
+        let Longitude = 46.710210
+
+        let cordinat = location.coordinate
+        let camera = GMSCameraPosition.camera(withLatitude: Latitude, longitude: Longitude, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+         mapView.frame = CGRect(x: 0, y: 0, width: 360, height: 360)
+         self.map.addSubview(mapView)
+
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: Latitude, longitude: Longitude)
+        marker.title = "Riyadh"
+        marker.snippet = "princes Norah"
+        marker.map = mapView
+
+
+
+    }
+    
+    
+    
 }
 
 
