@@ -38,7 +38,7 @@ class RequestConfirmationViewController: UIViewController {
         animationview?.frame = view.bounds
         animationview?.loopMode = .loop
         animationview?.animationSpeed = 1
-//        animationview.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        //        animationview.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         animationview?.frame = CGRect(x: (view.frame.width / 2) - 100, y: 200, width: 200, height: 200)
         view.addSubview(animationview!)
         animationview?.play()
@@ -120,24 +120,44 @@ extension RequestConfirmationViewController : UIImagePickerControllerDelegate & 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let _ = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
-            db.collection("Orders").document("\(String(describing: orderID))").updateData([
-                
-                "isCompleted" : true,
-                "nuberOfTrees" : "\(numberOfTrees)"
-                
-            ]){ err in
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                    print("Document successfully updated")
+            if let orderID = orderID{
+                db.collection("Orders").document("\(String(describing: orderID))").updateData([
+                    
+                    "isCompleted" : true,
+                    "nuberOfTrees" : "\(numberOfTrees)"
+                    
+                ]){ error in
+                    if let error = error {
+                        print("Error updating document: \(error)")
+                    } else {
+                        print("Document successfully updated")
+                    }
                 }
             }
             
+            if let email = Auth.auth().currentUser?.email{
+                db.collection("Users").whereField("email", isEqualTo: email ).getDocuments {
+                    querySnapshot, error in
+                    
+                    if let querySnapshotDocs = querySnapshot?.documents{
+                        for doc in querySnapshotDocs {
+                            doc.reference.updateData(["numberOfTrees" : "\(self.numberOfTrees)"])
+                        }
+                    }
+                    if let error = error {
+                        print("Error updating document: \(error.localizedDescription)")
+                    } else {
+                        print("Document successfully updated")
+                    }
+                }
+            }
             
             picker.dismiss(animated: true, completion: nil)
+            navigationController?.popToRootViewController(animated: true)
+            
             
         } else {
-            print("Error")
+            print("error")
         }
     }
 }
