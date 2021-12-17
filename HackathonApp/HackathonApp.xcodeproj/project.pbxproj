@@ -62,7 +62,6 @@
 		ADF6A714276B170F006E1629 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ADF6A718276B17BE006E1629 /* SayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingCell.swift; sourceTree = "<group>"; };
-		ADF6A71A276B183D006E1629 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
 		B3558188276B7C16002CC012 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +136,6 @@
 				ADF6A716276B1753006E1629 /* ArticleCell.swift */,
 				ADF6A718276B17BE006E1629 /* SayingCell.swift */,
 				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
-				ADF6A71A276B183D006E1629 /* video.mp4 */,
 				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
 				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
 			);
