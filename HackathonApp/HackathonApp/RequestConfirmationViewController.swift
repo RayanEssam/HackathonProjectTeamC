@@ -7,10 +7,11 @@
 
 import UIKit
 import Firebase
+import Lottie
 
 class RequestConfirmationViewController: UIViewController {
     
-    var animationview = UILabel()
+    var animationview : AnimationView?
     let progressState = UILabel()
     let confirmPlanting = UIButton()
     let imagePicker = UIImagePickerController()
@@ -33,20 +34,19 @@ class RequestConfirmationViewController: UIViewController {
     func setup(){
         
         view.backgroundColor = .white
-        //        animationview = .init(name: "")
-        //        animationview?.frame = view.bounds
-        //        animationview?.loopMode = .loop
-        //        animationview?.animationSpeed = 1
-        animationview.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        animationview.frame = CGRect(x: 140, y: 200, width: 150, height: 150)
-        view.addSubview(animationview)
-        //        animationview?.play()
+        animationview = .init(name: "plant-progress-animation")
+        animationview?.frame = view.bounds
+        animationview?.loopMode = .loop
+        animationview?.animationSpeed = 1
+//        animationview.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        animationview?.frame = CGRect(x: (view.frame.width / 2) - 100, y: 200, width: 200, height: 200)
+        view.addSubview(animationview!)
+        animationview?.play()
         
         // read from firebase firestore
         progressState.text = "جاري المعالجة ..."
         progressState.textColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
         progressState.frame = CGRect(x: 0, y: 400, width: view.frame.width, height: 50)
-        progressState.textColor = .black
         progressState.textAlignment = .center
         view.addSubview(progressState)
         
@@ -76,7 +76,7 @@ class RequestConfirmationViewController: UIViewController {
         view.addSubview(decrementNumberOfTrees)
         
         // take pics
-        confirmPlanting.frame = CGRect(x: (view.frame.width / 2) - 90, y: 550, width: 200, height: 30)
+        confirmPlanting.frame = CGRect(x: (view.frame.width / 2) - 110, y: 550, width: 220, height: 30)
         confirmPlanting.setTitle("التقط صورة لإتمام العملية ", for: .normal)
         confirmPlanting.setTitleColor(.white, for: .normal)
         confirmPlanting.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
