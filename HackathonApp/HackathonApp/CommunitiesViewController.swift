@@ -76,7 +76,7 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         cell.joinButton.setTitle("الانضمام", for: .normal)
      
         cell .layer.cornerRadius = 20
-        cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+       
         
         
         

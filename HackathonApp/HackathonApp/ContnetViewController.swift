@@ -111,20 +111,20 @@ extension ContnetViewController: UICollectionViewDataSource {
         
         if collectionView == self.videosCollectionView {
             let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoID", for: indexPath) as! VideoCell
-            myCell.backgroundColor = #colorLiteral(red: 0.7488231063, green: 0.7156726718, blue: 1, alpha: 0.8470588235)
+            myCell.backgroundColor = #colorLiteral(red: 0.1674584448, green: 0.3054045737, blue: 0.260445863, alpha: 1)
 //            myCell.comminInit(vidURL : videoURL[indexPath.row])
             return myCell
         }
         
         else if collectionView == self.articleCollectionView{
             let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleID", for: indexPath) as! ArticleCell
-            myCell.backgroundColor = #colorLiteral(red: 1, green: 0.7488913536, blue: 0.6484727859, alpha: 0.8470588235)
+            myCell.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
             myCell.article.text = articlesArray[indexPath.row]
             return myCell
         }
         else {
             let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sayingID", for: indexPath) as! SayingCell
-            myCell.backgroundColor = #colorLiteral(red: 0.6981652379, green: 0.6907193661, blue: 1, alpha: 0.8470588235)
+            myCell.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
             myCell.saying.text = sayingArray[indexPath.row]
             return myCell
         }
