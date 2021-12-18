@@ -38,7 +38,7 @@ class CommunitiesCell: UITableViewCell {
         
         joinButton.addTarget(self, action: #selector(join), for: .touchDown)
         joinButton.layer.cornerRadius = 20
-        joinButton.backgroundColor = #colorLiteral(red: 0, green: 0.3955854177, blue: 0, alpha: 0.6980392157)
+        joinButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         
     }
     
