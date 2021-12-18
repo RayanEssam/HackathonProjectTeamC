@@ -1,5 +1,11 @@
-import Foundation
+//
+//  Constants.swift
+//  HackathonApp
+//
+//  Created by Rayan Taj on 19/12/2021.
+//
 
+import Foundation
 var placesArr:[Places] = [
     
    
@@ -54,39 +60,3 @@ var Articles : [Article] = [
            )
 
 ]
-
-
-struct Supplies {
-    var name:String
-    var description:String
-    var amount : Int
-    var coord : Coordinates
-}
-
-struct WaterContainer{
-    var name:String
-    var description:String
-    var coord : Coordinates
-    
-}
-
-
-
-struct Places {
-    var name:String
-    var description:String
-    var coord : Coordinates
-}
-
-struct Coordinates {
-    var  long : Float
-    var   lat : Float
-}
-
-
-struct Article {
-    
-    var name  :String
-    var content : String
-    
-}

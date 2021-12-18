@@ -43,12 +43,17 @@
 		ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A716276B1753006E1629 /* ArticleCell.swift */; };
 		ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A718276B17BE006E1629 /* SayingCell.swift */; };
 		ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */; };
-		B3558189276B7C16002CC012 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3558188276B7C16002CC012 /* Structs.swift */; };
 		CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */; };
 		CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */; };
 		CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */; };
 		CFBC7418276CAF5500806B02 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
 		CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */; };
+		CFBC7422276E917000806B02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7421276E917000806B02 /* Constants.swift */; };
+		CFBC7425276E91AB00806B02 /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7424276E91AB00806B02 /* Supplies.swift */; };
+		CFBC7427276E91D000806B02 /* WaterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7426276E91D000806B02 /* WaterContainer.swift */; };
+		CFBC7429276E91E300806B02 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7428276E91E300806B02 /* Places.swift */; };
+		CFBC742B276E91FE00806B02 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC742A276E91FE00806B02 /* Coordinates.swift */; };
+		CFBC742D276E921F00806B02 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC742C276E921F00806B02 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,12 +97,17 @@
 		ADF6A716276B1753006E1629 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ADF6A718276B17BE006E1629 /* SayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingCell.swift; sourceTree = "<group>"; };
 		ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
-		B3558188276B7C16002CC012 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 		CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldsDesign.swift; sourceTree = "<group>"; };
 		CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Bold .ttf"; sourceTree = "<group>"; };
 		CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialNeedsAndDonationsViewController.swift; sourceTree = "<group>"; };
+		CFBC7421276E917000806B02 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFBC7424276E91AB00806B02 /* Supplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
+		CFBC7426276E91D000806B02 /* WaterContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterContainer.swift; sourceTree = "<group>"; };
+		CFBC7428276E91E300806B02 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		CFBC742A276E91FE00806B02 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		CFBC742C276E921F00806B02 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,43 +152,22 @@
 		62F8091B276A7679007B2EC9 /* HackathonApp */ = {
 			isa = PBXGroup;
 			children = (
+				CFBC741E276E90D300806B02 /* Cells */,
+				CFBC741D276E905A00806B02 /* Controllers */,
 				A288E879276B4C8500887F01 /* Fonts */,
 				A288E876276B2DAA00887F01 /* Extensions */,
 				62F8091C276A7679007B2EC9 /* AppDelegate.swift */,
 				62F8091E276A7679007B2EC9 /* SceneDelegate.swift */,
+				CFBC7421276E917000806B02 /* Constants.swift */,
+				62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */,
+				CFBC7423276E918A00806B02 /* Models */,
 				82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */,
-				62F80920276A7679007B2EC9 /* ViewController.swift */,
-				62F8093A276A77F9007B2EC9 /* SignUpViewController.swift */,
-				626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */,
-				626DF77E276C9F0400E5A530 /* TabBarViewController.swift */,
-				62F80930276A771F007B2EC9 /* CommunitiesViewController.swift */,
-				1E4650E6276DF7B300D42EF8 /* ViewCommunities.swift */,
-				62F80934276A7757007B2EC9 /* ContnetViewController.swift */,
-				B3558188276B7C16002CC012 /* Structs.swift */,
-				62F80936276A77A1007B2EC9 /* HomeViewController.swift */,
-				62F80938276A77CC007B2EC9 /* ProfileViewController.swift */,
-				62F8093C276A781C007B2EC9 /* CommunitiesCell.swift */,
-				62F8093E276A7843007B2EC9 /* LocationsCell.swift */,
-				62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */,
-				1E4650E8276E40B200D42EF8 /* RequestSeedsViewController.swift */,
-				62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */,
-				AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */,
-				62F59EBE276B3096007A0E6F /* RankingViewController.swift */,
 				62F80925276A767A007B2EC9 /* Assets.xcassets */,
 				62F80927276A767A007B2EC9 /* LaunchScreen.storyboard */,
 				62F8092A276A767A007B2EC9 /* Info.plist */,
 				62F80932276A773F007B2EC9 /* GoogleService-Info.plist */,
-				ADF6A714276B170F006E1629 /* VideoCell.swift */,
-				ADF6A716276B1753006E1629 /* ArticleCell.swift */,
-				ADF6A718276B17BE006E1629 /* SayingCell.swift */,
-				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
-				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
-				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
 				82D4D991276C9E9800EAFDC4 /* data.json */,
 				AD02259B276CE04700AF4F23 /* plant-progress-animation.json */,
-				CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */,
-				8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */,
-				62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -210,6 +199,72 @@
 				BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFBC741D276E905A00806B02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC741F276E90F800806B02 /* AuthinticationAndValidation */,
+				CFBC7420276E912100806B02 /* RequestOrder */,
+				62F80930276A771F007B2EC9 /* CommunitiesViewController.swift */,
+				1E4650E6276DF7B300D42EF8 /* ViewCommunities.swift */,
+				626DF77E276C9F0400E5A530 /* TabBarViewController.swift */,
+				62F80934276A7757007B2EC9 /* ContnetViewController.swift */,
+				62F80936276A77A1007B2EC9 /* HomeViewController.swift */,
+				62F80938276A77CC007B2EC9 /* ProfileViewController.swift */,
+				8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */,
+				62F59EBE276B3096007A0E6F /* RankingViewController.swift */,
+				CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */,
+				ADF6A71B276B2678006E1629 /* ArticleDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CFBC741E276E90D300806B02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				62F8093E276A7843007B2EC9 /* LocationsCell.swift */,
+				62F8093C276A781C007B2EC9 /* CommunitiesCell.swift */,
+				ADF6A714276B170F006E1629 /* VideoCell.swift */,
+				62F59EC0276B3220007A0E6F /* RankingCell.swift */,
+				ADF6A718276B17BE006E1629 /* SayingCell.swift */,
+				ADF6A716276B1753006E1629 /* ArticleCell.swift */,
+				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CFBC741F276E90F800806B02 /* AuthinticationAndValidation */ = {
+			isa = PBXGroup;
+			children = (
+				62F80920276A7679007B2EC9 /* ViewController.swift */,
+				626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */,
+				62F8093A276A77F9007B2EC9 /* SignUpViewController.swift */,
+			);
+			path = AuthinticationAndValidation;
+			sourceTree = "<group>";
+		};
+		CFBC7420276E912100806B02 /* RequestOrder */ = {
+			isa = PBXGroup;
+			children = (
+				1E4650E8276E40B200D42EF8 /* RequestSeedsViewController.swift */,
+				62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */,
+				AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */,
+				62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */,
+			);
+			path = RequestOrder;
+			sourceTree = "<group>";
+		};
+		CFBC7423276E918A00806B02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC7424276E91AB00806B02 /* Supplies.swift */,
+				CFBC7426276E91D000806B02 /* WaterContainer.swift */,
+				CFBC7428276E91E300806B02 /* Places.swift */,
+				CFBC742A276E91FE00806B02 /* Coordinates.swift */,
+				CFBC742C276E921F00806B02 /* Article.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,15 +390,17 @@
 			files = (
 				62F8093F276A7843007B2EC9 /* LocationsCell.swift in Sources */,
 				62F80921276A7679007B2EC9 /* ViewController.swift in Sources */,
+				CFBC7425276E91AB00806B02 /* Supplies.swift in Sources */,
 				62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */,
-				B3558189276B7C16002CC012 /* Structs.swift in Sources */,
 				A2A854A0276E649800F4622D /* Constraints.swift in Sources */,
 				62F8093B276A77F9007B2EC9 /* SignUpViewController.swift in Sources */,
 				8272D65B276E26E000DF0029 /* CategoryTableViewCell.swift in Sources */,
+				CFBC742B276E91FE00806B02 /* Coordinates.swift in Sources */,
 				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
 				1E4650E9276E40B200D42EF8 /* RequestSeedsViewController.swift in Sources */,
 				ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */,
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
+				CFBC7427276E91D000806B02 /* WaterContainer.swift in Sources */,
 				CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */,
 				626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
@@ -356,15 +413,18 @@
 				AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */,
 				CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */,
 				ADF6A715276B170F006E1629 /* VideoCell.swift in Sources */,
+				CFBC7422276E917000806B02 /* Constants.swift in Sources */,
 				626DF77F276C9F0400E5A530 /* TabBarViewController.swift in Sources */,
 				62F80939276A77CC007B2EC9 /* ProfileViewController.swift in Sources */,
 				62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */,
+				CFBC742D276E921F00806B02 /* Article.swift in Sources */,
 				82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */,
 				62F80935276A7757007B2EC9 /* ContnetViewController.swift in Sources */,
 				62F8093D276A781C007B2EC9 /* CommunitiesCell.swift in Sources */,
 				ADF6A71C276B2678006E1629 /* ArticleDetailsViewController.swift in Sources */,
 				62F80937276A77A1007B2EC9 /* HomeViewController.swift in Sources */,
 				62F59EBF276B3096007A0E6F /* RankingViewController.swift in Sources */,
+				CFBC7429276E91E300806B02 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
