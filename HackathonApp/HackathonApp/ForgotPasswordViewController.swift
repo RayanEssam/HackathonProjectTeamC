@@ -93,7 +93,7 @@ class ForgotAlert {
         alertView.addSubview(messageLabel)
         
         let button =  UIButton(frame: CGRect(x: 20, y: alertView.frame.size.height-70, width: alertView.frame.size.width-40, height: 50))
-        button.setTitle("إخفاء", for: .normal)
+        button.setTitle("حسنًا", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         button.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
