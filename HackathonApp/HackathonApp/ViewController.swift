@@ -31,19 +31,19 @@ class ViewController: UIViewController {
         //MARK: - EmailTextField
         emailTextField.placeholder = "الايميل"
         emailTextField.autocapitalizationType = .none
-//        emailTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-//        emailTextField.customTextfield()
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        emailTextField.customTextfield()
         emailTextField.textAlignment = .right
-        emailTextField.borderStyle = .roundedRect
+//        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 250, width: view.frame.width - 40, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = "كلمة السر"
-//        passwordTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         passwordTextField.textAlignment = .right
-//        passwordTextField.customTextfield()
-        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.customTextfield()
+//        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
         view.addSubview(passwordTextField)
@@ -124,12 +124,6 @@ class ViewController: UIViewController {
                 
             } else {
                 print(error!.localizedDescription)
-                let dialogMessage = UIAlertController(title: "تنبيه", message: error?.localizedDescription, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "موافق", style: .default, handler: { (action) -> Void in
-                    print("Ok to login or signup")
-                })
-                dialogMessage.addAction(ok)
-                self.present(dialogMessage, animated: true, completion: nil)
             }
             
         }

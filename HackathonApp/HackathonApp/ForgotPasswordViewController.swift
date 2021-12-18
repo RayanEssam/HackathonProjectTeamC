@@ -12,7 +12,7 @@ class ForgotPasswordViewController: UIViewController {
         //MARK: - EmailTextField
         emailTextField.placeholder = "البريد الإلكتروني"
         emailTextField.autocapitalizationType = .none
-        emailTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         emailTextField.customTextfield()
         emailTextField.textAlignment = .right
         emailTextField.textContentType = .emailAddress

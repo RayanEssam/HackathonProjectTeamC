@@ -35,15 +35,15 @@ class ProfileViewController: UIViewController {
         view.addSubview(lineView)
         //MARK: - ProfileImage
         profileImage.image = UIImage(systemName: "person.crop.circle")
-        profileImage.frame = CGRect(x: 25, y: 150, width: 100, height: 100)
+        profileImage.frame = CGRect(x: 145, y: 130, width: 100, height: 100)
         profileImage.tintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         view.addSubview(profileImage)
         //MARK: - EmailLabel
        
         NameLable.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        NameLable.frame = CGRect(x: 80, y: 180, width: 120, height: 50)
+        NameLable.frame = CGRect(x: 0, y: 240, width: 385, height: 50)
         NameLable.font = .systemFont(ofSize: 25, weight: .semibold)
-        NameLable.textAlignment = .right
+        NameLable.textAlignment = .center
         view.addSubview(NameLable)
         
         

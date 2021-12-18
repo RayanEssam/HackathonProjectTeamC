@@ -43,29 +43,37 @@ class SignUpViewController: UIViewController {
         view.addSubview(title1)
         //MARK: - NameTextField
         nameTextField.placeholder = "الاسم"
+        nameTextField.customTextfield()
+        nameTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         nameTextField.textAlignment = .right
-        nameTextField.borderStyle = .roundedRect
+//        nameTextField.borderStyle = .roundedRect
         nameTextField.frame = CGRect(x: 20, y: 200, width: 350, height: 34)
         view.addSubview(nameTextField)
 
         //MARK: - IDTextField
         idTextField.placeholder = "رقم الهوية"
         idTextField.textAlignment = .right
-        idTextField.borderStyle = .roundedRect
+        idTextField.customTextfield()
+        idTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+//        idTextField.borderStyle = .roundedRect
         idTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(idTextField)
         //MARK: - EmailTextField
         emailTextField.placeholder = " الايميل"
+        emailTextField.customTextfield()
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         emailTextField.textAlignment = .right
         emailTextField.autocapitalizationType = .none
-        emailTextField.borderStyle = .roundedRect
+//        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = " كلمة السر"
+        passwordTextField.customTextfield()
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         passwordTextField.textAlignment = .right
-        passwordTextField.borderStyle = .roundedRect
+//        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
         view.addSubview(passwordTextField)
@@ -131,12 +139,6 @@ class SignUpViewController: UIViewController {
                 self.present(tabBarVC, animated: true, completion: nil)
             } else {
                 print(error!.localizedDescription)
-                let dialogMessage = UIAlertController(title: "تنبيه", message: error?.localizedDescription, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "موافق", style: .default, handler: { (action) -> Void in
-                    print("Ok to login or signup")
-                })
-                dialogMessage.addAction(ok)
-                self.present(dialogMessage, animated: true, completion: nil)
             }
         }
         
