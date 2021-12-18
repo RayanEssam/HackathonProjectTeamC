@@ -65,13 +65,13 @@ class MyAlert {
         titleLabel.textAlignment = .center
         alertView.addSubview(titleLabel)
         
-        let messageLabel = UILabel(frame: CGRect(x: 10, y: 60, width: alertView.frame.size.width, height: 130))
+        let messageLabel = UILabel(frame: CGRect(x: 10, y: 60, width: alertView.frame.size.width - 20, height: 130))
         
         messageLabel.numberOfLines = 0
         messageLabel.text = message
         messageLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         messageLabel.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        messageLabel.textAlignment = .left
+        messageLabel.textAlignment = .right
         alertView.addSubview(messageLabel)
         
         let button =  UIButton(frame: CGRect(x: 20, y: alertView.frame.size.height-70, width: alertView.frame.size.width-40, height: 50))
