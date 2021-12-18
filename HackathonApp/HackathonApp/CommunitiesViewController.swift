@@ -74,7 +74,7 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         cell.labelName.text = communitiesArray[indexPath.row].name
         cell.labelDescraption.text = communitiesArray[indexPath.row].describe
         cell.joinButton.setTitle("الانضمام", for: .normal)
-     
+        cell.labelName.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         cell .layer.cornerRadius = 20
        
         
