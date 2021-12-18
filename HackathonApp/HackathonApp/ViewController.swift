@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         hideKeyboardWhenTappedAround()
         //
-        title1.text = "« إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها »"
+        title1.text = "«إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها»"
         title1.numberOfLines = 3
         title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         title1.textAlignment = .center
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         title1.font = .systemFont(ofSize: 23, weight: .semibold)
         view.addSubview(title1)
         //MARK: - EmailTextField
-        emailTextField.placeholder = "الايميل"
+        emailTextField.placeholder = "الإيميل"
         emailTextField.autocapitalizationType = .none
         emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         emailTextField.customTextfield()
@@ -48,14 +48,14 @@ class ViewController: UIViewController {
         passwordTextField.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - HidePasswordButton
-        showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        showPasswordButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
         showPasswordButton.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         showPasswordButton.frame = CGRect(x: 20, y: 287, width: 60, height: 60)
         showPasswordButton.addTarget(self, action: #selector(hidePassword), for: .touchUpInside)
         view.addSubview(showPasswordButton)
         //MARK: - ForgotPasswordButton
         forgotPasswordButton.setTitle("نسيت كلمة السر ؟", for: .normal)
-        forgotPasswordButton.setTitleColor(UIColor(#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)), for: .normal)
+        forgotPasswordButton.setTitleColor(#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1), for: .normal)
         forgotPasswordButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         forgotPasswordButton.frame = CGRect(x: 225, y: 340, width: 170, height: 40)
         forgotPasswordButton.addTarget(self, action: #selector(forgotPassword), for: .touchUpInside)

@@ -3,6 +3,7 @@ import UIKit
 import Firebase
 class SignUpViewController: UIViewController {
     //MARK: - Properties
+    let customAlert = MyAlert()
     let db = Firestore.firestore()
     let lineView = UIView()
     let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
@@ -59,7 +60,7 @@ class SignUpViewController: UIViewController {
         idTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(idTextField)
         //MARK: - EmailTextField
-        emailTextField.placeholder = " الايميل"
+        emailTextField.placeholder = " الإيميل"
         emailTextField.customTextfield()
         emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         emailTextField.textAlignment = .right
@@ -78,7 +79,7 @@ class SignUpViewController: UIViewController {
         passwordTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - SignUpButton
-        signUpButton.setTitle("انشاء حساب", for: .normal)
+        signUpButton.setTitle("إنشاء حساب", for: .normal)
         signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
@@ -138,7 +139,7 @@ class SignUpViewController: UIViewController {
                 let tabBarVC = TabBarViewController()
                 self.present(tabBarVC, animated: true, completion: nil)
             } else {
-                print(error!.localizedDescription)
+                self.customAlert.showAlert(with: "تنبيه", message: "\(error!.localizedDescription)", on: self)
             }
         }
         
@@ -146,6 +147,9 @@ class SignUpViewController: UIViewController {
     
     @objc func dismissPage() {
         dismiss(animated: true, completion: nil)
+    }
+    @objc func dismissAlert() {
+        customAlert.dismissAlert()
     }
     
     @objc func signIn() {
