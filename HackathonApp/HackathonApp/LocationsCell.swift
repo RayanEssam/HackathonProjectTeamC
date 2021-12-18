@@ -22,7 +22,7 @@ class LocationsCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         iconImage.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        iconImage.frame = CGRect(x: 360, y: 30, width: 20, height: 20)
+        iconImage.frame = CGRect(x: 360, y: 30 , width: 20, height: 20)
         
         location.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         location.font = .boldSystemFont(ofSize: 18)

@@ -112,9 +112,15 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
             navigationController?.pushViewController(requestSubmmition, animated: true)
             
             
-        }else{
+        } else if mySegmentedControl.selectedSegmentIndex == 1 {
             
+            let requestSubmmition = RequestSeedsViewController()
+            requestSubmmition.locationName = suppliesArr[indexPath.row] .name
+            requestSubmmition.locationDescription = suppliesArr[indexPath.row].description
+            requestSubmmition.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(requestSubmmition, animated: true)
             
+        } else {
             let requestSubmmition = RequestSubmissionViewController()
             requestSubmmition.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(requestSubmmition, animated: true)
