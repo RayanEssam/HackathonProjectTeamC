@@ -36,12 +36,11 @@ class CommunitiesViewController: UIViewController {
                 
                 for document in querySnapshot!.documents {
                     let data = document.data()
-                    print(document)
-                    print(data)
                     let  description = data["Description"] as! String
                     let name =  data["Name"] as! String
-                    self.communitiesArray.append(Communities(name: name , describe: description))
-                    print(self.communitiesArray)
+                    let location = data["Location"] as! String
+                    let users = data["Users"] as? [String] ?? [""]
+                    self.communitiesArray.append(Communities(name: name , describe: description, location: location , users: users ))
                 }
                 self.communitiesTableView!.reloadData()
             }
@@ -50,6 +49,8 @@ class CommunitiesViewController: UIViewController {
     }
     
 }
+  
+
 
 extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource  {
     fileprivate func setupTableView() {
@@ -76,7 +77,7 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         cell.joinButton.setTitle("الانضمام", for: .normal)
         cell.labelName.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         cell .layer.cornerRadius = 20
-       
+        
         
         
         
@@ -91,7 +92,14 @@ extension CommunitiesViewController: UITableViewDelegate , UITableViewDataSource
         return 150
         
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let select = communitiesArray[indexPath.row]
+        let  viewCommunities = ViewCommunities()
+        viewCommunities.arrCommunities = select
+        present(viewCommunities , animated: true , completion: nil)
+       
+        
+    }
     
 }
 
@@ -107,7 +115,8 @@ struct Communities {
     
     var name : String
     var describe : String
-    
+    var location : String
+    var users = [String]()
     
 }
 
