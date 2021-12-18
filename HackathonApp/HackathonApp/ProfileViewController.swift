@@ -78,6 +78,7 @@ class ProfileViewController: UIViewController {
         tracking.frame = CGRect(x: 20, y: 460, width: 350, height: 35)
         tracking.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         tracking.createShadowButton()
+        tracking.addTarget(self, action: #selector(navigateToRequestsVC), for: .touchUpInside)
         view.addSubview(tracking)
         //
         let treeimage = UIImageView()
@@ -101,6 +102,12 @@ class ProfileViewController: UIViewController {
         customAlert.dismissAlert()
     }
     
+    @objc func navigateToRequestsVC(){
+            let vc = RequestConfirmationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    
     func getData(){
         db.collection("Users").whereField("email", isEqualTo: Auth.auth().currentUser!.email!)
         
@@ -121,7 +128,6 @@ class ProfileViewController: UIViewController {
                     print(error!.localizedDescription)
                 }
             }
-        
     }
 }
 
