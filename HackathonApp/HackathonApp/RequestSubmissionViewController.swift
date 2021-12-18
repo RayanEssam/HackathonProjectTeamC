@@ -89,6 +89,10 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLo
     }
     @objc func specialneedsAndDonationsPressed (){
         
+        let specialneedsAndDonationsVC  = SpecialNeedsAndDonationsViewController()
+        specialneedsAndDonationsVC.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(specialneedsAndDonationsVC, animated: true)
+        
     }
     
     @objc func submetButtonPressed (){

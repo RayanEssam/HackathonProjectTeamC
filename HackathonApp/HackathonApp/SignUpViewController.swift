@@ -3,6 +3,7 @@ import UIKit
 import Firebase
 class SignUpViewController: UIViewController {
     //MARK: - Properties
+    let customAlert = MyAlert()
     let db = Firestore.firestore()
     let lineView = UIView()
     let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
@@ -43,34 +44,42 @@ class SignUpViewController: UIViewController {
         view.addSubview(title1)
         //MARK: - NameTextField
         nameTextField.placeholder = "الاسم"
+        nameTextField.customTextfield()
+        nameTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         nameTextField.textAlignment = .right
-        nameTextField.borderStyle = .roundedRect
+//        nameTextField.borderStyle = .roundedRect
         nameTextField.frame = CGRect(x: 20, y: 200, width: 350, height: 34)
         view.addSubview(nameTextField)
 
         //MARK: - IDTextField
         idTextField.placeholder = "رقم الهوية"
         idTextField.textAlignment = .right
-        idTextField.borderStyle = .roundedRect
+        idTextField.customTextfield()
+        idTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+//        idTextField.borderStyle = .roundedRect
         idTextField.frame = CGRect(x: 20, y: 250, width: 350, height: 34)
         view.addSubview(idTextField)
         //MARK: - EmailTextField
-        emailTextField.placeholder = " الايميل"
+        emailTextField.placeholder = " الإيميل"
+        emailTextField.customTextfield()
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         emailTextField.textAlignment = .right
         emailTextField.autocapitalizationType = .none
-        emailTextField.borderStyle = .roundedRect
+//        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 300, width: 350, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = " كلمة السر"
+        passwordTextField.customTextfield()
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         passwordTextField.textAlignment = .right
-        passwordTextField.borderStyle = .roundedRect
+//        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 20, y: 350, width: 350, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - SignUpButton
-        signUpButton.setTitle("انشاء حساب", for: .normal)
+        signUpButton.setTitle("إنشاء حساب", for: .normal)
         signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
@@ -130,13 +139,7 @@ class SignUpViewController: UIViewController {
                 let tabBarVC = TabBarViewController()
                 self.present(tabBarVC, animated: true, completion: nil)
             } else {
-                print(error!.localizedDescription)
-                let dialogMessage = UIAlertController(title: "تنبيه", message: error?.localizedDescription, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "موافق", style: .default, handler: { (action) -> Void in
-                    print("Ok to login or signup")
-                })
-                dialogMessage.addAction(ok)
-                self.present(dialogMessage, animated: true, completion: nil)
+                self.customAlert.showAlert(with: "تنبيه", message: "\(error!.localizedDescription)", on: self)
             }
         }
         
@@ -144,6 +147,9 @@ class SignUpViewController: UIViewController {
     
     @objc func dismissPage() {
         dismiss(animated: true, completion: nil)
+    }
+    @objc func dismissAlert() {
+        customAlert.dismissAlert()
     }
     
     @objc func signIn() {

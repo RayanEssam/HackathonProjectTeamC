@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		626DF77F276C9F0400E5A530 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626DF77E276C9F0400E5A530 /* TabBarViewController.swift */; };
 		626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */; };
+		62B24E5D276DCB19008C8C23 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */; };
 		62F59EBF276B3096007A0E6F /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F59EBE276B3096007A0E6F /* RankingViewController.swift */; };
 		62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F59EC0276B3220007A0E6F /* RankingCell.swift */; };
 		62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F8091C276A7679007B2EC9 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */; };
 		CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */; };
 		CFBC7418276CAF5500806B02 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
+		CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,7 @@
 		40B79F26496DCD082DAA5DD6 /* Pods-HackathonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.debug.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.debug.xcconfig"; sourceTree = "<group>"; };
 		626DF77E276C9F0400E5A530 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		62F59EBE276B3096007A0E6F /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		62F59EC0276B3220007A0E6F /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		62F80919276A7679007B2EC9 /* HackathonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,7 @@
 		CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 		CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldsDesign.swift; sourceTree = "<group>"; };
 		CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Bold .ttf"; sourceTree = "<group>"; };
+		CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialNeedsAndDonationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
 				82D4D991276C9E9800EAFDC4 /* data.json */,
 				AD02259B276CE04700AF4F23 /* plant-progress-animation.json */,
+				CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */,
+				62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -311,9 +317,11 @@
 				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
 				ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */,
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
+				CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */,
 				626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
 				ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */,
+				62B24E5D276DCB19008C8C23 /* CustomAlertViewController.swift in Sources */,
 				AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */,
 				CFBC740A276B5FFB00806B02 /* ButtonsDesign.swift in Sources */,
 				62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */,

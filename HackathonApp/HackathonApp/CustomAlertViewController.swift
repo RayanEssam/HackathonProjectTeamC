@@ -1,54 +1,36 @@
-
+//
+//  CustomAlertViewController.swift
+//  HackathonApp
+//
+//  Created by Abdullah AlRashoudi on 12/18/21.
+//
 
 import UIKit
-import Firebase
-class ForgotPasswordViewController: UIViewController {
-    let customAlert = ForgotAlert()
-    let resetButton = UIButton()
-    let emailTextField = UITextField()
+
+class CustomAlertViewController: UIViewController {
+    let customAlert = MyAlert()
+    let myButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        //MARK: - EmailTextField
-        emailTextField.placeholder = "البريد الإلكتروني"
-        emailTextField.autocapitalizationType = .none
-        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
-        emailTextField.customTextfield()
-        emailTextField.textAlignment = .right
-        emailTextField.textContentType = .emailAddress
-        emailTextField.frame = CGRect(x: 20, y: 220, width: view.frame.width - 40, height: 34)
-        view.addSubview(emailTextField)
-        
-        //MARK: - ResetPasswordButton
-        resetButton.setTitle( "إعادة تعيين كلمة المرور" , for: .normal)
-        resetButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
-        resetButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        resetButton.layer.cornerRadius = 15
-        resetButton.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
-        resetButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
-        resetButton.addTarget(self, action: #selector(resetLink), for: .touchUpInside)
-        resetButton.createShadowButton()
-        view.addSubview(resetButton)
+        myButton.frame = CGRect(x: 20, y: 200, width: 350, height: 34)
+        myButton.setTitle("Button", for: .normal)
+        myButton.setTitleColor(.black, for: .normal)
+        view.addSubview(myButton)
+        myButton.addTarget(self, action: #selector(button), for: .touchUpInside)
     }
-    
-    @objc func resetLink() {
-        Auth.auth().sendPasswordReset(withEmail: emailTextField.text!) { error in
-            
-            if error == nil {
-                self.customAlert.showAlert(with: "تنبيه", message: "تم إرسال رابط إعادة التعيين", on: self)
-            }
-            
-        }
+
+    @objc func button() {
+        
+        customAlert.showAlert(with: "hello", message: "this is my custom alert", on: self)
     }
     
     @objc func dismissAlert() {
         customAlert.dismissAlert()
     }
-
 }
 
-
-class ForgotAlert {
+class MyAlert {
     struct Constants {
         static let backgroundAlphaTo: CGFloat = 0.6
     }
@@ -83,13 +65,13 @@ class ForgotAlert {
         titleLabel.textAlignment = .center
         alertView.addSubview(titleLabel)
         
-        let messageLabel = UILabel(frame: CGRect(x: -10, y: 60, width: alertView.frame.size.width, height: 130))
+        let messageLabel = UILabel(frame: CGRect(x: 10, y: 60, width: alertView.frame.size.width, height: 130))
         
         messageLabel.numberOfLines = 0
         messageLabel.text = message
         messageLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         messageLabel.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-        messageLabel.textAlignment = .right
+        messageLabel.textAlignment = .left
         alertView.addSubview(messageLabel)
         
         let button =  UIButton(frame: CGRect(x: 20, y: alertView.frame.size.height-70, width: alertView.frame.size.width-40, height: 50))

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         hideKeyboardWhenTappedAround()
         //
-        title1.text = "« إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها »"
+        title1.text = "«إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها»"
         title1.numberOfLines = 3
         title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         title1.textAlignment = .center
@@ -29,33 +29,33 @@ class ViewController: UIViewController {
         title1.font = .systemFont(ofSize: 23, weight: .semibold)
         view.addSubview(title1)
         //MARK: - EmailTextField
-        emailTextField.placeholder = "الايميل"
+        emailTextField.placeholder = "الإيميل"
         emailTextField.autocapitalizationType = .none
-//        emailTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
-//        emailTextField.customTextfield()
+        emailTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        emailTextField.customTextfield()
         emailTextField.textAlignment = .right
-        emailTextField.borderStyle = .roundedRect
+//        emailTextField.borderStyle = .roundedRect
         emailTextField.textContentType = .emailAddress
         emailTextField.frame = CGRect(x: 20, y: 250, width: view.frame.width - 40, height: 34)
         view.addSubview(emailTextField)
         //MARK: - PasswordTextField
         passwordTextField.placeholder = "كلمة السر"
-//        passwordTextField.placeholderColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
+        passwordTextField.placeholderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         passwordTextField.textAlignment = .right
-//        passwordTextField.customTextfield()
-        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.customTextfield()
+//        passwordTextField.borderStyle = .roundedRect
         passwordTextField.isSecureTextEntry = true
         passwordTextField.frame = CGRect(x: 20, y: 300, width: view.frame.width - 40, height: 34)
         view.addSubview(passwordTextField)
         //MARK: - HidePasswordButton
-        showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        showPasswordButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
         showPasswordButton.tintColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         showPasswordButton.frame = CGRect(x: 20, y: 287, width: 60, height: 60)
         showPasswordButton.addTarget(self, action: #selector(hidePassword), for: .touchUpInside)
         view.addSubview(showPasswordButton)
         //MARK: - ForgotPasswordButton
         forgotPasswordButton.setTitle("نسيت كلمة السر ؟", for: .normal)
-        forgotPasswordButton.setTitleColor(UIColor(#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)), for: .normal)
+        forgotPasswordButton.setTitleColor(#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1), for: .normal)
         forgotPasswordButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         forgotPasswordButton.frame = CGRect(x: 225, y: 340, width: 170, height: 40)
         forgotPasswordButton.addTarget(self, action: #selector(forgotPassword), for: .touchUpInside)
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         signUpLabel.textAlignment = .center
         view.addSubview(signUpLabel)
         //MARK: - SignUpButton
-        signUpButton.setTitle("انشاء حساب", for: .normal)
+        signUpButton.setTitle("إنشاء حساب", for: .normal)
 //        signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
@@ -124,12 +124,6 @@ class ViewController: UIViewController {
                 
             } else {
                 print(error!.localizedDescription)
-                let dialogMessage = UIAlertController(title: "تنبيه", message: error?.localizedDescription, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "موافق", style: .default, handler: { (action) -> Void in
-                    print("Ok to login or signup")
-                })
-                dialogMessage.addAction(ok)
-                self.present(dialogMessage, animated: true, completion: nil)
             }
             
         }
