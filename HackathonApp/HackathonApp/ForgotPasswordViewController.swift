@@ -3,7 +3,7 @@
 import UIKit
 import Firebase
 class ForgotPasswordViewController: UIViewController {
-    
+    let customAlert = MyAlert()
     let resetButton = UIButton()
     let emailTextField = UITextField()
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class ForgotPasswordViewController: UIViewController {
         view.addSubview(emailTextField)
         
         //MARK: - ResetPasswordButton
-        resetButton.setTitle( "اعادة تعيين كلمة المرور" , for: .normal)
+        resetButton.setTitle( "إعادة تعيين كلمة المرور" , for: .normal)
         resetButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         resetButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         resetButton.layer.cornerRadius = 15
@@ -35,21 +35,14 @@ class ForgotPasswordViewController: UIViewController {
         Auth.auth().sendPasswordReset(withEmail: emailTextField.text!) { error in
             
             if error == nil {
-                
-                let alert = UIAlertController(title: "تنبيه", message: "تم إرسال رابط إعادة التعيين", preferredStyle: .alert)
-                
-                let action = UIAlertAction(title: "موافق", style: .default, handler: nil)
-                
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now()+3.0) {
-                    
-                    self.dismiss(animated: true, completion: nil)
-                }
+                self.customAlert.showAlert(with: "تنبيه", message: "تم إرسال رابط إعادة التعيين", on: self)
             }
             
         }
+    }
+    
+    @objc func dismissAlert() {
+        customAlert.dismissAlert()
     }
 
 }

@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         signUpLabel.textAlignment = .center
         view.addSubview(signUpLabel)
         //MARK: - SignUpButton
-        signUpButton.setTitle("انشاء حساب", for: .normal)
+        signUpButton.setTitle("إنشاء حساب", for: .normal)
 //        signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
