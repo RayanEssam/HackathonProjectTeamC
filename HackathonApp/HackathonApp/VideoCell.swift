@@ -6,57 +6,38 @@
 //
 
 import UIKit
-import AVKit
 
 class VideoCell: UICollectionViewCell {
     
     let cellID = "videoID"
     
-    var player : AVPlayer!
-    
-    var thumbnail : UIImageView!
-    
-    let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+    var thumbnail = UIImageView()
+    var playButton = UIImageView()
+    var videoTitle = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.cornerRadius = 8
-
-        self.addSubview(view)
-    }
-    
-    func comminInit(vidURL : String){
-        let url = URL(string: vidURL)
-        self.getThumbnailFromVideoURL(url: url!) { thumbnail in
-            self.thumbnail.image = thumbnail
-        }
-    }
-    
-    func getThumbnailFromVideoURL(url : URL, completion: @escaping ((_ image : UIImage?)->Void)) {
         
-//        DispatchQueue.global().async {
-//
-//            let asset = AVAsset()
-//
-//            let avAssetImageGenerator = AVAssetImageGenerator(asset: asset)
-//
-//            avAssetImageGenerator.appliesPreferredTrackTransform = true
-//
-//            let thumbnailTime = CMTimeMake(value: 2, timescale: 2)
-//
-//            do{
-//                let cgThumbImage = try avAssetImageGenerator.copyCGImage(at: thumbnailTime, actualTime: nil)
-//
-//                let thumbImage = UIImage(cgImage : cgThumbImage)
-//
-//                DispatchQueue.main.async{
-//                    completion(thumbImage)
-//                }
-//            }
-//            catch{
-//                print(error.localizedDescription)
-//            }
-//        }
+        thumbnail.frame = CGRect(x: 0, y: 0, width: 220, height: 130)
+        thumbnail.layer.cornerCurve = .circular
+        thumbnail.layer.shadowOffset = CGSize(width: 2, height: 2)
+        thumbnail.layer.shadowColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+        
+        playButton.image = UIImage(systemName: "play.fill")
+        playButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        playButton.center = thumbnail.center
+        playButton.tintColor = .white
+        
+        videoTitle.frame = CGRect(x: 5, y: 130, width: 210, height: 50)
+        videoTitle.numberOfLines = 0
+        videoTitle.textAlignment = .center
+        videoTitle.font = .boldSystemFont(ofSize: 13)
+        videoTitle.textColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+        
+        self.addSubview(thumbnail)
+        self.addSubview(playButton)
+        self.addSubview(videoTitle)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
