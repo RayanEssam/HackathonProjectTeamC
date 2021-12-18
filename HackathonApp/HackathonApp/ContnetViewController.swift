@@ -128,7 +128,7 @@ extension ContnetViewController: UICollectionViewDataSource {
         
         else if collectionView == self.articleCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleID", for: indexPath) as! ArticleCell
-            cell.article.text = articlesArray[indexPath.row]
+            cell.article.text = Articles[indexPath.row].name
             return cell
         }
         else {
@@ -152,7 +152,9 @@ extension ContnetViewController: UICollectionViewDelegate {
         
         else if collectionView == self.articleCollectionView {
             let articleVC = ArticleDetailsViewController()
-            articleVC.article.text = articlesArray[indexPath.row]
+            articleVC.articleTitle.text = Articles[indexPath.row].name
+            articleVC.article.text = Articles[indexPath.row].content
+
             
             self.present(articleVC, animated: true, completion: nil)
         }
