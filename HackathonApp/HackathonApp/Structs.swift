@@ -19,12 +19,12 @@ var placesArr:[Places] = [
 
 var suppliesArr:[Supplies] = [
     
-    Supplies(name: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", description: "بذور شجرة السدر", amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", description: "بذور شجرة السدر"
+    Supplies(name: "بذور شجرة السدر" , description: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name: "بذور شجرة السدر" , description: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض"
              , amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "جامعة الملك سعود", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "جامعة الامام محمد بن سعود", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "أمانة منطقة الرياض", description: "", amount: 10, coord: Coordinates(long: 1000, lat: 1000))
+    Supplies(name:"بذور جوز الهند" , description: "جامعة الملك سعود", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name:"بذور النخيل" , description:  "جامعة الامام محمد بن سعود", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
+    Supplies(name: "بذور القنب" , description: "أمانة منطقة الرياض", amount: 10, coord: Coordinates(long: 1000, lat: 1000))
 ]
 
 var waterArr : [WaterContainer] = [
