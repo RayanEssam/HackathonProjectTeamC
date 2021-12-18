@@ -35,6 +35,7 @@
 		8272D661276E351000DF0029 /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D660276E351000DF0029 /* Amiri-Bold.ttf */; };
 		82D4D992276C9E9800EAFDC4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D4D991276C9E9800EAFDC4 /* data.json */; };
 		82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */; };
+		A2A854A0276E649800F4622D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A8549F276E649800F4622D /* Constraints.swift */; };
 		AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */; };
 		AD02259C276CE04700AF4F23 /* plant-progress-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AD02259B276CE04700AF4F23 /* plant-progress-animation.json */; };
 		AD614E42276BCA2E005C2999 /* AutoScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */; };
@@ -83,6 +84,7 @@
 		8272D660276E351000DF0029 /* Amiri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Bold.ttf"; sourceTree = "<group>"; };
 		82D4D991276C9E9800EAFDC4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchScreen.swift; sourceTree = "<group>"; };
+		A2A8549F276E649800F4622D /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfirmationViewController.swift; sourceTree = "<group>"; };
 		AD02259B276CE04700AF4F23 /* plant-progress-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "plant-progress-animation.json"; sourceTree = "<group>"; };
 		AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollingCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */,
 				CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */,
+				A2A8549F276E649800F4622D /* Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				62F80921276A7679007B2EC9 /* ViewController.swift in Sources */,
 				62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */,
 				B3558189276B7C16002CC012 /* Structs.swift in Sources */,
+				A2A854A0276E649800F4622D /* Constraints.swift in Sources */,
 				62F8093B276A77F9007B2EC9 /* SignUpViewController.swift in Sources */,
 				8272D65B276E26E000DF0029 /* CategoryTableViewCell.swift in Sources */,
 				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
