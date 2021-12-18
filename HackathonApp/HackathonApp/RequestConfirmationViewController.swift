@@ -21,13 +21,10 @@ class RequestConfirmationViewController: UIViewController {
     let numberOfTreesLabel = UILabel()
     var numberOfTrees = 0
     var score = 0
-
+    
     var orderID : UUID?
     var currentUserNumberOfTrees = 0
     var currentUserScore = 0
-   
-
-    
     
     let db = Firestore.firestore()
     var locationName = ""
@@ -131,43 +128,39 @@ class RequestConfirmationViewController: UIViewController {
                 
                 if error == nil {
                     
-                  
+                    
                     let score = querySnapshot?.documents[0].get("score")!
                     let numberOfTrees = querySnapshot?.documents[0].get("numberOfTrees")!
                     
-//                    print("score : " , score)
-//                    print("number of Trees : ",numberOfTrees)
-
+                    //                    print("score : " , score)
+                    //                    print("number of Trees : ",numberOfTrees)
+                    
                     
                     self.currentUserScore = score as! Int
                     self.currentUserNumberOfTrees = numberOfTrees as! Int
-                   
-//                    self.result =  self.currentUserNumberOfTrees * 3 +  self.currentUserScore
-//                    print("..........................................")
-//
-                  
+                    
+                    //                    self.result =  self.currentUserNumberOfTrees * 3 +  self.currentUserScore
+                    //                    print("..........................................")
+                    //
+                    
                     
                     
                     
                     print( "currentUserScore : " ,self.currentUserScore + self.currentUserNumberOfTrees * 3 )
                     
-                   
-
-
+                    
+                    
+                    
                     print( "currentUserNumberOfTrees : " ,self.currentUserNumberOfTrees)
                     
                     print( "result : : " ,self.score)
-
+                    
                     
                 } else {
                     print(error!.localizedDescription)
                 }
             }
-        
     }
-    
-    
-    
 }
 
 extension RequestConfirmationViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
@@ -175,59 +168,60 @@ extension RequestConfirmationViewController : UIImagePickerControllerDelegate & 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let _ = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
-            if let orderID = orderID{
-                db.collection("Orders").document("\(String(describing: orderID))").updateData([
-                    
-                    "isCompleted" : true,
-                    "nuberOfTrees" : "\(numberOfTrees)"
-                    
-                ]){ error in
-                    if let error = error {
-                        print("Error updating document: \(error)")
-                    } else {
-                        print("Document successfully updated")
-                    }
-                }
-            }
-            
-            if let email = Auth.auth().currentUser?.email{
-                db.collection("Users").whereField("email", isEqualTo: email ).getDocuments {
+//            if let orderID = orderID{
+                db.collection("Orders").whereField("isCompleted", isEqualTo: false).getDocuments {
                     querySnapshot, error in
                     
                     if let querySnapshotDocs = querySnapshot?.documents{
                         for doc in querySnapshotDocs {
-                            // work     HERE
-                            doc.reference.updateData(["numberOfTrees" : self.numberOfTrees as! Int + self.currentUserNumberOfTrees])
-                          let temp = self.numberOfTrees * 3
-                            doc.reference.updateData(["score" :  self.currentUserScore + temp])
-
                             
-                            // doc.reference.updateData(["score" : self.scoreas! Int + self.currentUserScore])
-
+                            doc.reference.updateData(["isCompleted" : true])
+                            doc.reference.updateData(["nuberOfTrees" : self.numberOfTrees])
+                            
+                        }
+                        if let error = error {
+                            print("Error updating document: \(error)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                }
+                
+                if let email = Auth.auth().currentUser?.email{
+                    db.collection("Users").whereField("email", isEqualTo: email ).getDocuments {
+                        querySnapshot, error in
+                        
+                        if let querySnapshotDocs = querySnapshot?.documents{
+                            for doc in querySnapshotDocs {
+                                // work     HERE
+                                doc.reference.updateData(["numberOfTrees" : self.numberOfTrees as! Int + self.currentUserNumberOfTrees])
+                                let temp = self.numberOfTrees * 3
+                                doc.reference.updateData(["score" :  self.currentUserScore + temp])
+                                
+                                // doc.reference.updateData(["score" : self.scoreas! Int + self.currentUserScore])
+                                
+                            }
+                        }
+                        if let error = error {
+                            print("Error updating document: \(error.localizedDescription)")
+                            
+                            
+                        } else {
+                            print("Document successfully updated")
                             
                         }
                     }
-                    if let error = error {
-                        print("Error updating document: \(error.localizedDescription)")
-                       
-                        
-                    } else {
-                        print("Document successfully updated")
-   
-                    }
                 }
-            }
-            
-            picker.dismiss(animated: true, completion: nil)
-            navigationController?.popToRootViewController(animated: true)
-            
-            
-        } else {
-            print("error")
+                
+                picker.dismiss(animated: true, completion: nil)
+                navigationController?.popToRootViewController(animated: true)
+                
+                
+//            } else {
+//                print("error")
+//            }
         }
     }
 }
-
-
-
-
+    
+    
