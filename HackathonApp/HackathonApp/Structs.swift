@@ -2,30 +2,22 @@ import Foundation
 
 var placesArr:[Places] = [
     
-    Places(name: "منتزه الملك سلمان البري", description: "منتزه الملك سلمان البري ببنبان شمال مدينة الرياض ", coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي حنيفة", description: "يعد من أفضل الأماكن السياحية في السعودية ومن أهم منتزهات الرياض", coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي السلي", description: "  يقع في منطقة الرياض بالمملكة العربية السعودية يبلغ طوله 103 كليومترات", coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي نمار", description: "يعد من المعالم السياحية الأشهر والأكثر جذبا لزوار وسياح العاصمة الرياض", coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "منتزه الملك سلمان البري", description: "منتزه الملك سلمان البري ببنبان شمال مدينة الرياض "
-           , coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي حنيفة", description: "يعد من أفضل الأماكن السياحية في السعودية ومن أهم منتزهات الرياض"
-           , coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي السلي", description: "  يقع في منطقة الرياض بالمملكة العربية السعودية يبلغ طوله 103 كليومترات"
-           , coord: Coordinates(long: 1000, lat: 1000)),
-    Places(name: "وادي نمار", description: "يعد من المعالم السياحية الأشهر والأكثر جذبا لزوار وسياح العاصمة الرياض"
-           , coord: Coordinates(long: 1000, lat: 1000))
+   
+    Places(name: "منتزه الملك سلمان البري", description: "منتزه الملك سلمان البري ببنبان شمال مدينة الرياض ", coord: Coordinates(long: 46.5998408, lat: 25.0079899)),
+    Places(name: "وادي حنيفة", description: "يعد من أفضل الأماكن السياحية في السعودية ومن أهم منتزهات الرياض", coord: Coordinates(long: 46.7049941, lat: 24.5936340)),
+    Places(name: "وادي السلي", description: "  يقع في منطقة الرياض بالمملكة العربية السعودية يبلغ طوله 103 كليومترات", coord: Coordinates(long: 46.8830451, lat: 24.6883262)),
+    Places(name: "وادي نمار", description: "يعد من المعالم السياحية الأشهر والأكثر جذبا لزوار وسياح العاصمة الرياض", coord: Coordinates(long: 46.6790206, lat: 24.5685229))
     
 ]
 
 var suppliesArr:[Supplies] = [
     
-    Supplies(name: "بذور شجرة السدر" , description: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "بذور شجرة السدر" , description: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض"
-             , amount: 600, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name:"بذور جوز الهند" , description: "جامعة الملك سعود", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name:"بذور النخيل" , description:  "جامعة الامام محمد بن سعود", amount: 10, coord: Coordinates(long: 1000, lat: 1000)),
-    Supplies(name: "بذور القنب" , description: "أمانة منطقة الرياض", amount: 10, coord: Coordinates(long: 1000, lat: 1000))
+    Supplies(name: "جامعة الاميرة نورة - كلية الزراعه و علوم الارض", description: "بذور شجرة السدر", amount: 600, coord: Coordinates(long: 46.710210, lat: 24.858659)),
+    Supplies(name: "جامعة الملك سعود", description: "", amount: 10, coord: Coordinates(long: 46.6191078, lat: 24.7257277)),
+    Supplies(name: "جامعة الامام محمد بن سعود", description: "", amount: 10, coord: Coordinates(long: 46.6962513, lat: 24.8149349)),
+    Supplies(name: "أمانة منطقة الرياض", description: "", amount: 10, coord: Coordinates(long: 46.7368614, lat: 24.6722271))
 ]
+
 
 var waterArr : [WaterContainer] = [
     WaterContainer(name: "محطة تحلية المياه-النرجس", description: "يعد من المعالم السياحية الأشهر والأكثر جذبا لزوار وسياح العاصمة الرياض", coord: Coordinates(long: 1000, lat: 1000)),
