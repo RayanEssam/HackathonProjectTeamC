@@ -80,7 +80,7 @@ extension ViewCommunities: UICollectionViewDelegate, UICollectionViewDataSource 
     
     fileprivate func setupCollectionView() {
         
-        collectionView = UICollectionView(frame: CGRect(x: 35, y: 345 , width: 340, height: 403 ), collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 356 , width: view.frame.width - 15, height: 403 ), collectionViewLayout: UICollectionViewFlowLayout())
         
         collectionView?.delegate = self
         collectionView?.dataSource = self
@@ -125,9 +125,9 @@ class UsersViewCell : UICollectionViewCell {
     
     let db = Firestore.firestore()
     
+    var UserName = UILabel(frame: CGRect(x: 10, y:70,  width: 95 , height: 30 ) )
+    var image = UIImageView(frame: CGRect(x: 30 , y:0,  width: 60 , height: 60 ) )
     
-    var UserName = UILabel(frame: CGRect(x: 0, y:70,  width:  90 , height: 30 ) )
-    var image = UIImageView(frame: CGRect(x: 0, y:0,  width: 90 , height: 65 ) )
     
     
     override init( frame: CGRect){
