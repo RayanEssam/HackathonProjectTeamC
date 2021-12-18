@@ -96,7 +96,7 @@ class HomeViewController: UIViewController {
         // setting the timer for collection view
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
         
-        let mainActionButton = UIButton(frame: CGRect(x: 20, y: 700, width: 345, height: 40))
+        let mainActionButton = UIButton(frame: CGRect(x: 20, y: 700, width: 345, height: 35))
         mainActionButton.setTitle("اغرسها", for: .normal)
         mainActionButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         mainActionButton.setTitleColor(.white, for: .normal)

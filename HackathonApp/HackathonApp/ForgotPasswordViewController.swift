@@ -1,9 +1,4 @@
-//
-//  ForgotPasswordViewController.swift
-//  HackathonApp
-//
-//  Created by Abdullah AlRashoudi on 12/17/21.
-//
+
 
 import UIKit
 import Firebase
@@ -25,7 +20,7 @@ class ForgotPasswordViewController: UIViewController {
         view.addSubview(emailTextField)
         
         //MARK: - ResetPasswordButton
-        resetButton.setTitle( "إعادة تعيين من خلال البريد الإلكتروني" , for: .normal)
+        resetButton.setTitle( "اعادة تعيين كلمة المرور" , for: .normal)
         resetButton.setTitleColor(#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1), for: .normal)
         resetButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         resetButton.layer.cornerRadius = 15

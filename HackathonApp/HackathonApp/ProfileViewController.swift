@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController {
         scoreLable.layer.cornerRadius = 15
         scoreLable.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         scoreLable.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        scoreLable.frame = CGRect(x: 20, y: 400, width: 350, height: 40)
+        scoreLable.frame = CGRect(x: 20, y: 400, width: 350, height: 35)
         scoreLable.font = .systemFont(ofSize: 20, weight: .semibold)
         scoreLable.textAlignment = .center
         view.addSubview(scoreLable)
@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController {
         numberOfTreesLable.layer.cornerRadius = 15
         numberOfTreesLable.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         numberOfTreesLable.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        numberOfTreesLable.frame = CGRect(x: 20, y: 340, width: 350, height: 40)
+        numberOfTreesLable.frame = CGRect(x: 20, y: 340, width: 350, height: 35)
         numberOfTreesLable.font = .systemFont(ofSize: 20, weight: .semibold)
         numberOfTreesLable.textAlignment = .center
         view.addSubview(numberOfTreesLable)
@@ -74,8 +74,9 @@ class ProfileViewController: UIViewController {
         tracking.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         tracking.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         tracking.layer.cornerRadius = 15
-        tracking.frame = CGRect(x: 20, y: 460, width: 350, height: 40)
+        tracking.frame = CGRect(x: 20, y: 460, width: 350, height: 35)
         tracking.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
+        tracking.createShadowButton()
         view.addSubview(tracking)
         //
         let treeimage = UIImageView()

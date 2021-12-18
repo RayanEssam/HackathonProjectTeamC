@@ -74,7 +74,7 @@ class SignUpViewController: UIViewController {
         signUpButton.backgroundColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         signUpButton.setTitleColor(UIColor (#colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1)), for: .normal)
         signUpButton.layer.cornerRadius = 15
-        signUpButton.frame = CGRect(x: 20, y: 420, width: view.frame.width - 40, height: 34)
+        signUpButton.frame = CGRect(x: 20, y: 420, width: 345, height: 35)
         signUpButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         view.addSubview(signUpButton)
@@ -131,6 +131,12 @@ class SignUpViewController: UIViewController {
                 self.present(tabBarVC, animated: true, completion: nil)
             } else {
                 print(error!.localizedDescription)
+                let dialogMessage = UIAlertController(title: "تنبيه", message: error?.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "موافق", style: .default, handler: { (action) -> Void in
+                    print("Ok to login or signup")
+                })
+                dialogMessage.addAction(ok)
+                self.present(dialogMessage, animated: true, completion: nil)
             }
         }
         
