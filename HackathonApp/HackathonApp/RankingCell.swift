@@ -37,10 +37,10 @@ class RankingCell: UITableViewCell {
         nameLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive   = true
         nameLabel.numberOfLines = 0
         nameLabel.font = nameLabel.font.withSize(18)
-        nameLabel.textColor =   #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        nameLabel.textColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         scoreLabel.numberOfLines = 0
         scoreLabel.font = scoreLabel.font.withSize(18)
-        scoreLabel.textColor =   #colorLiteral(red: 0.6016606688, green: 0.849891603, blue: 0.5555105209, alpha: 1)
+        scoreLabel.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
     }
 }
 

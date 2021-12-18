@@ -43,19 +43,26 @@ class ContnetViewController: UIViewController {
         return cv
     }()
     
+    
+    
+    
     let videoURL = ["https://youtu.be/NbGxpOwCPsA", "https://youtu.be/sMN4zi3QwgM"]
     
     let thumbnails = [UIImage(named: "thumbnail1"), UIImage(named: "thumbnail2")]
     
     let videoTitles = ["السعودية الخضراء | حقبة جديدة من التغير المناخي", "Saudi Green Initiative and Middle East Green Initiative - A New Era of Climate Action"]
     
-    let articlesArray = ["أن يسهم مشروع الرياض الخضراء، في رفع نصيب الفرد من المساحة الخضراء في المدينة، وزيادة نسبة المساحات الخضراء الإجمالية فيها من خلال إطلاق نشر وتكثيف التشجير في كافة عناصر المدينة ومختلف أرجائها، مع تحقيق الاستغلال الأمثل للمياه المعالجة في أعمال الري، بما يساهم في تحسين جودة الهواء وخفض درجات الحرارة في المدينة، وتشجيع السكان على ممارسة نمط حياة أكثر نشاطاً وحيوية بما ينسجم مع أهداف توجهات “رؤية المملكة 2030 .", "تسعى السعودية لزراعة عشرة مليارات شجرة خلال العقود القادمة في إطار حملة طموحة كشف عنها ولي العهد الأمير محمد بن سلمان لخفض انبعاثات الكربون ومكافحة التلوث وتدهور الأراضي وقال الأمير محمد إن السعودية تستهدف خفض انبعاثات الكربون “وذلك من خلال مشاريع الطاقة المتجددة التي ستوفر 50 بالمئة من إنتاج الكهرباء داخل المملكة بحلول عام 2030 . "]
+ 
     
     let sayingArray = [
         "« مَنْ أَحْيَا أَرْضًا مَيْتَةً فَهِيَ لَهُ »",
         "« ما من امرىء يحيي أرضا فيشرب منها ذو كبد حَرَّى أو تصيب منها عافية إلا كتب الله بها أجرا »",
         "« من كانت له أرض فليزرعها، فإن لم يستطع وعجز عنها فليمنحها آخاه المسلم ولا يؤاجرها إياه »",
         "« إنْ قامَتِ الساعةُ وفي يدِ أحدِكمْ فَسِيلةٌ، فإنِ استطاعَ أنْ لا تقومَ حتى يَغرِسَها فلْيغرِسْهَا »"]
+    
+    
+    
+    
     
     let playerViewController = AVPlayerViewController()
     var player = AVPlayer()
@@ -66,6 +73,7 @@ class ContnetViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .white
         
+   
         //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         //        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         //        layout.itemSize = CGSize(width: 200, height: 180)
@@ -80,6 +88,7 @@ class ContnetViewController: UIViewController {
         
         videosCollectionView.dataSource = self
         videosCollectionView.delegate = self
+
         
         articleCollectionView.delegate = self
         articleCollectionView.dataSource = self
@@ -108,7 +117,7 @@ extension ContnetViewController: UICollectionViewDataSource {
         }
         
         else if collectionView == self.articleCollectionView {
-            return articlesArray.count
+            return Articles.count
         }
         
         else {
@@ -129,6 +138,8 @@ extension ContnetViewController: UICollectionViewDataSource {
         else if collectionView == self.articleCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleID", for: indexPath) as! ArticleCell
             cell.article.text = Articles[indexPath.row].name
+            cell.articleContent.text = Articles[indexPath.row].content
+
             return cell
         }
         else {

@@ -26,7 +26,7 @@ class ArticleDetailsViewController: UIViewController {
         article.frame = CGRect(x: 20, y: 140, width: view.frame.width - 40, height: 500)
         article.backgroundColor = .red
         article.textAlignment = .right
-        article.font = .systemFont(ofSize: 20)
+//        article.font = .systemFont(ofSize: 20)
         article.numberOfLines = 0
         article.textColor = .black
         view.addSubview(articleTitle)

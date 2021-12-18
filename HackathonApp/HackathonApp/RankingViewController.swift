@@ -46,6 +46,7 @@ class RankingViewController: UIViewController {
                         let score = doc.get("score")!
                         self.arrayScore.append(UserRank(name: name as! String, rank: score as! Int))
                     }
+                  
                     self.rankingTableView.reloadData()
                 } else {
                     print(error!.localizedDescription)

@@ -108,7 +108,7 @@ class RequestSubmissionViewController: UIViewController, MKMapViewDelegate, CLLo
             "email" : "\(Auth.auth().currentUser!.email!)",
             "isCompleted" : false,
             "locationName" : "\(locationName)",
-            "nuberOfTrees" : "0"
+            "nuberOfTrees" : 0
             
         ]) { error  in
             
