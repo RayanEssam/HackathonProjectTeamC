@@ -77,8 +77,8 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
         }else  if mySegmentedControl.selectedSegmentIndex == 1{
             //  Create cells from the Supplies array
             
-            cell.location.text = suppliesArr[indexPath.row] .name
-            cell.desciption.text = suppliesArr[indexPath.row].description
+            cell.location.text = suppliesArr[indexPath.row] .description
+            cell.desciption.text = suppliesArr[indexPath.row].name
             return cell
             
         } else{
@@ -122,6 +122,10 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
             
         } else {
             let requestSubmmition = RequestSubmissionViewController()
+            requestSubmmition.locationName = waterArr[indexPath.row] .name
+            requestSubmmition.locationDescription = waterArr[indexPath.row].description
+            requestSubmmition.submetButton.isHidden = true
+            requestSubmmition.specialneedsAndDonations.isHidden = true
             requestSubmmition.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(requestSubmmition, animated: true)
             

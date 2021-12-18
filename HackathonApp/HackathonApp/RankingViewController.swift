@@ -20,6 +20,7 @@ class RankingViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureTableView()
+//        getData()
         listenForChanges()
         //        MARK: Title label:
         titleLabel.text = "ترتيب الأعضاء"
@@ -32,7 +33,6 @@ class RankingViewController: UIViewController {
         
         
         
-        getData()
     }
     func configureTableView(){
         view.addSubview(rankingTableView)

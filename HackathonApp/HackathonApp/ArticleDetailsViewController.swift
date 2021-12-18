@@ -17,14 +17,14 @@ class ArticleDetailsViewController: UIViewController {
         
         view.backgroundColor = .white
         articleTitle.frame = CGRect(x: 20, y: 30, width: view.frame.width - 40, height: 80)
-        articleTitle.backgroundColor = .green
-        articleTitle.text = "مبادرة السعودية الخضراء"
+//        articleTitle.backgroundColor = .green
+     
         articleTitle.font = .boldSystemFont(ofSize: 25)
         articleTitle.textAlignment = .right
         
         
         article.frame = CGRect(x: 20, y: 140, width: view.frame.width - 40, height: 500)
-        article.backgroundColor = .red
+//        article.backgroundColor = .red
         article.textAlignment = .right
 //        article.font = .systemFont(ofSize: 20)
         article.numberOfLines = 0
