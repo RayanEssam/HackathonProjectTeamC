@@ -22,11 +22,12 @@ class ViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         //
         title1.text = "«إن قامت الساعة وفي يد أحدكم فسيلة، فإن استطاع أن لا يقوم حتى يغرسها فليغرسها»"
+        title1.font = UIFont(name: "Amiri-Bold", size: 23)
         title1.numberOfLines = 3
         title1.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         title1.textAlignment = .center
         title1.frame = CGRect(x: 28, y: 100, width: 350, height: 150)
-        title1.font = .systemFont(ofSize: 23, weight: .semibold)
+//        title1.font = .systemFont(ofSize: 23, weight: .semibold)
         view.addSubview(title1)
         //MARK: - EmailTextField
         emailTextField.placeholder = "الإيميل"
