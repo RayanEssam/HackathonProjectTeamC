@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E4650E7276DF7B300D42EF8 /* ViewCommunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4650E6276DF7B300D42EF8 /* ViewCommunities.swift */; };
+		1E4650E9276E40B200D42EF8 /* RequestSeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4650E8276E40B200D42EF8 /* RequestSeedsViewController.swift */; };
 		626DF77F276C9F0400E5A530 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626DF77E276C9F0400E5A530 /* TabBarViewController.swift */; };
 		626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */; };
 		62B24E5D276DCB19008C8C23 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */; };
@@ -28,6 +29,10 @@
 		62F8093F276A7843007B2EC9 /* LocationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F8093E276A7843007B2EC9 /* LocationsCell.swift */; };
 		62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */; };
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
+		8272D65B276E26E000DF0029 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */; };
+		8272D65D276E335C00DF0029 /* ArefRuqaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */; };
+		8272D65F276E336C00DF0029 /* Amiri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */; };
+		8272D661276E351000DF0029 /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D660276E351000DF0029 /* Amiri-Bold.ttf */; };
 		82D4D992276C9E9800EAFDC4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D4D991276C9E9800EAFDC4 /* data.json */; };
 		82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */; };
 		AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */; };
@@ -48,6 +53,7 @@
 /* Begin PBXFileReference section */
 		02708901D540DA5D5D8E23DA /* Pods-HackathonApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.release.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.release.xcconfig"; sourceTree = "<group>"; };
 		1E4650E6276DF7B300D42EF8 /* ViewCommunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCommunities.swift; sourceTree = "<group>"; };
+		1E4650E8276E40B200D42EF8 /* RequestSeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSeedsViewController.swift; sourceTree = "<group>"; };
 		40B79F26496DCD082DAA5DD6 /* Pods-HackathonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonApp.debug.xcconfig"; path = "Target Support Files/Pods-HackathonApp/Pods-HackathonApp.debug.xcconfig"; sourceTree = "<group>"; };
 		626DF77E276C9F0400E5A530 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		626DF780276C9F3200E5A530 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,10 @@
 		62F8093E276A7843007B2EC9 /* LocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrepartionViewController.swift; sourceTree = "<group>"; };
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
+		8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArefRuqaa-Regular.ttf"; sourceTree = "<group>"; };
+		8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Regular.ttf"; sourceTree = "<group>"; };
+		8272D660276E351000DF0029 /* Amiri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Bold.ttf"; sourceTree = "<group>"; };
 		82D4D991276C9E9800EAFDC4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchScreen.swift; sourceTree = "<group>"; };
 		AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 				62F8093C276A781C007B2EC9 /* CommunitiesCell.swift */,
 				62F8093E276A7843007B2EC9 /* LocationsCell.swift */,
 				62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */,
+				1E4650E8276E40B200D42EF8 /* RequestSeedsViewController.swift */,
 				62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */,
 				AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */,
 				62F59EBE276B3096007A0E6F /* RankingViewController.swift */,
@@ -164,6 +175,7 @@
 				82D4D991276C9E9800EAFDC4 /* data.json */,
 				AD02259B276CE04700AF4F23 /* plant-progress-animation.json */,
 				CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */,
+				8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */,
 				62B24E5C276DCB19008C8C23 /* CustomAlertViewController.swift */,
 			);
 			path = HackathonApp;
@@ -181,7 +193,10 @@
 		A288E879276B4C8500887F01 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */,
 				CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */,
+				8272D660276E351000DF0029 /* Amiri-Bold.ttf */,
+				8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -255,11 +270,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F80929276A767A007B2EC9 /* LaunchScreen.storyboard in Resources */,
+				8272D661276E351000DF0029 /* Amiri-Bold.ttf in Resources */,
 				AD02259C276CE04700AF4F23 /* plant-progress-animation.json in Resources */,
 				62F80933276A773F007B2EC9 /* GoogleService-Info.plist in Resources */,
 				62F80926276A767A007B2EC9 /* Assets.xcassets in Resources */,
 				82D4D992276C9E9800EAFDC4 /* data.json in Resources */,
 				CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */,
+				8272D65F276E336C00DF0029 /* Amiri-Regular.ttf in Resources */,
+				8272D65D276E335C00DF0029 /* ArefRuqaa-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +335,9 @@
 				62F8091D276A7679007B2EC9 /* AppDelegate.swift in Sources */,
 				B3558189276B7C16002CC012 /* Structs.swift in Sources */,
 				62F8093B276A77F9007B2EC9 /* SignUpViewController.swift in Sources */,
+				8272D65B276E26E000DF0029 /* CategoryTableViewCell.swift in Sources */,
 				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
+				1E4650E9276E40B200D42EF8 /* RequestSeedsViewController.swift in Sources */,
 				ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */,
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
 				CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */,
