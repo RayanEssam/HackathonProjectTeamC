@@ -12,10 +12,15 @@ class RankingViewController: UIViewController {
     let db = Firestore.firestore()
     var arrayScore: [UserRank] = []
     let rankingTableView = UITableView(frame: CGRect(x: 10, y: 250, width: 365, height: 600))
+
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureTableView()
+        listenForChanges()
         //        MARK: Title label:
         titleLabel.text = "ترتيب الأعضاء"
         titleLabel.textColor =  #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
@@ -24,6 +29,9 @@ class RankingViewController: UIViewController {
         view.addSubview(titleLabel)
         //MARK: - TableView
         rankingTableView.register(RankingCell.self, forCellReuseIdentifier: "cell")
+        
+        
+        
         getData()
     }
     func configureTableView(){
@@ -53,7 +61,41 @@ class RankingViewController: UIViewController {
                 }
             }
     }
+    
+    func listenForChanges()  {
+        let currentUID = Auth.auth().currentUser?.uid
+
+        let collectionRefrence = db.collection("Users")
+            
+        collectionRefrence.order(by: "score", descending: true).addSnapshotListener {
+            
+            documentSnapshot, error in
+                
+            guard documentSnapshot != nil else {
+                    print("Error fetching document: \(error!)")
+                    return
+                  }
+            self.arrayScore.removeAll()
+            
+            for doc in documentSnapshot!.documents {
+                let name = doc.get("name")!
+                let score = doc.get("score")!
+                self.arrayScore.append(UserRank(name: name as! String, rank: score as! Int))
+            }
+          
+            self.rankingTableView.reloadData()
+            
+            }
+        
+        
+
+        
+    }
+    
+    
 }
+
+
 
 extension RankingViewController: UITableViewDelegate , UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
