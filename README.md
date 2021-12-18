@@ -195,17 +195,13 @@ https://user-images.githubusercontent.com/92252937/146613073-e90b3ff2-7045-4468-
 - مبادرة السعودية الخضراء
 - Notion
 - Imgur
-- Lottie
 - Vimeo
 - Readme.sa
 - Figma
 - Lottie library 
 - Firebase library
 - Google maps SDK 
-- Figma
 - Coolers
-- Firebase
-- Googel map
 - عدة مكتبات للخطوط
 
 ## الأسئلة الشائعة
