@@ -38,7 +38,7 @@ class RankingViewController: UIViewController {
     }
     
     func getData(){
-        db.collection("Users").order(by: "score")
+        db.collection("Users").order(by: "score", descending: true)
             .getDocuments { querySnapshot, error in
                 if error == nil {
                     for doc in querySnapshot!.documents {
