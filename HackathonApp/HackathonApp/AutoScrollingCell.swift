@@ -24,6 +24,7 @@ class AutoScrollingCell: UICollectionViewCell {
         info.font = .boldSystemFont(ofSize: 17)
         info.numberOfLines = 0
         info.textAlignment = .right
+//        info.font = UIFont(name: "Amiri-Bold", size: 23)
         self.addSubview(info)
         
         }

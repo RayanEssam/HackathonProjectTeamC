@@ -29,6 +29,9 @@
 		62F80941276A7869007B2EC9 /* RequestPrepartionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */; };
 		62F80943276A7887007B2EC9 /* RequestSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */; };
 		8272D65B276E26E000DF0029 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */; };
+		8272D65D276E335C00DF0029 /* ArefRuqaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */; };
+		8272D65F276E336C00DF0029 /* Amiri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */; };
+		8272D661276E351000DF0029 /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8272D660276E351000DF0029 /* Amiri-Bold.ttf */; };
 		82D4D992276C9E9800EAFDC4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 82D4D991276C9E9800EAFDC4 /* data.json */; };
 		82D4D994276C9EC200EAFDC4 /* LunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */; };
 		AD022598276CDA0400AF4F23 /* RequestConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */; };
@@ -73,6 +76,9 @@
 		62F80940276A7869007B2EC9 /* RequestPrepartionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrepartionViewController.swift; sourceTree = "<group>"; };
 		62F80942276A7887007B2EC9 /* RequestSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSubmissionViewController.swift; sourceTree = "<group>"; };
 		8272D65A276E26E000DF0029 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArefRuqaa-Regular.ttf"; sourceTree = "<group>"; };
+		8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Regular.ttf"; sourceTree = "<group>"; };
+		8272D660276E351000DF0029 /* Amiri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Bold.ttf"; sourceTree = "<group>"; };
 		82D4D991276C9E9800EAFDC4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		82D4D993276C9EC200EAFDC4 /* LunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchScreen.swift; sourceTree = "<group>"; };
 		AD022597276CDA0400AF4F23 /* RequestConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +190,10 @@
 		A288E879276B4C8500887F01 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8272D65C276E335B00DF0029 /* ArefRuqaa-Regular.ttf */,
 				CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */,
+				8272D660276E351000DF0029 /* Amiri-Bold.ttf */,
+				8272D65E276E336C00DF0029 /* Amiri-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -258,11 +267,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F80929276A767A007B2EC9 /* LaunchScreen.storyboard in Resources */,
+				8272D661276E351000DF0029 /* Amiri-Bold.ttf in Resources */,
 				AD02259C276CE04700AF4F23 /* plant-progress-animation.json in Resources */,
 				62F80933276A773F007B2EC9 /* GoogleService-Info.plist in Resources */,
 				62F80926276A767A007B2EC9 /* Assets.xcassets in Resources */,
 				82D4D992276C9E9800EAFDC4 /* data.json in Resources */,
 				CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */,
+				8272D65F276E336C00DF0029 /* Amiri-Regular.ttf in Resources */,
+				8272D65D276E335C00DF0029 /* ArefRuqaa-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
