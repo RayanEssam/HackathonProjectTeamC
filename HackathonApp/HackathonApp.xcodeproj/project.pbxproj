@@ -40,6 +40,7 @@
 		CFBC740B276B5FFB00806B02 /* TextfieldsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */; };
 		CFBC7412276B601200806B02 /* Harmattan-Bold .ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */; };
 		CFBC7418276CAF5500806B02 /* Pods_HackathonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0AAE7635B681BB763475EC /* Pods_HackathonApp.framework */; };
+		CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		CFBC7408276B5FFB00806B02 /* ButtonsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 		CFBC7409276B5FFB00806B02 /* TextfieldsDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldsDesign.swift; sourceTree = "<group>"; };
 		CFBC740D276B601100806B02 /* Harmattan-Bold .ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harmattan-Bold .ttf"; sourceTree = "<group>"; };
+		CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialNeedsAndDonationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				AD614E41276BCA2E005C2999 /* AutoScrollingCell.swift */,
 				82D4D991276C9E9800EAFDC4 /* data.json */,
 				AD02259B276CE04700AF4F23 /* plant-progress-animation.json */,
+				CFBC741B276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift */,
 			);
 			path = HackathonApp;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				62F59EC1276B3220007A0E6F /* RankingCell.swift in Sources */,
 				ADF6A717276B1753006E1629 /* ArticleCell.swift in Sources */,
 				62F80931276A771F007B2EC9 /* CommunitiesViewController.swift in Sources */,
+				CFBC741C276DB7B000806B02 /* SpecialNeedsAndDonationsViewController.swift in Sources */,
 				626DF781276C9F3200E5A530 /* ForgotPasswordViewController.swift in Sources */,
 				62F8091F276A7679007B2EC9 /* SceneDelegate.swift in Sources */,
 				ADF6A719276B17BE006E1629 /* SayingCell.swift in Sources */,
