@@ -56,16 +56,16 @@ class MyAlert {
         backgroundView.frame = targetView.bounds
         targetView.addSubview(backgroundView)
         targetView.addSubview(alertView)
-        alertView.frame = CGRect(x: 40, y: -300, width: targetView.frame.size.width-80, height: 300)
+        alertView.frame = CGRect(x: 40, y: -250, width: targetView.frame.size.width-80, height: 250)
         
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: alertView.frame.size.width, height: 80))
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: alertView.frame.size.width, height: 50))
         titleLabel.text = title
         titleLabel.textColor = #colorLiteral(red: 0.5040584803, green: 0.6786125302, blue: 0.3246438801, alpha: 1)
         titleLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         titleLabel.textAlignment = .center
         alertView.addSubview(titleLabel)
         
-        let messageLabel = UILabel(frame: CGRect(x: 10, y: 80, width: alertView.frame.size.width, height: 170))
+        let messageLabel = UILabel(frame: CGRect(x: 10, y: 60, width: alertView.frame.size.width, height: 130))
         
         messageLabel.numberOfLines = 0
         messageLabel.text = message
@@ -98,7 +98,7 @@ class MyAlert {
    @objc func dismissAlert() {
        
        UIView.animate(withDuration: 0.25, animations: {
-           self.alertView.frame = CGRect(x: 40, y: self.myTargetView.frame.size.height, width: self.myTargetView.frame.size.width-80, height: 300)
+           self.alertView.frame = CGRect(x: 40, y: self.myTargetView.frame.size.height, width: self.myTargetView.frame.size.width-80, height: 250)
                   
        }, completion: { done in
            if done {
