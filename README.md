@@ -172,11 +172,9 @@ https://user-images.githubusercontent.com/92252937/146613073-e90b3ff2-7045-4468-
    
  <img src="https://user-images.githubusercontent.com/92252803/146666147-bb3db7e1-2516-4dfd-a1e3-2950e77d978c.png" alt="" width="300">
    
-<img src="https://user-images.githubusercontent.com/92252803/146666194-c4e2e74b-0fd0-4f99-8a15-e539be1fde71.PNG" alt="" width="300">
+<img src="https://user-images.githubusercontent.com/92252803/146666247-396baa47-f898-4831-81b8-dd05a3232cbe.PNG" alt="" width="300">
 
 </p>
-
-
 
 
 ## التحديات التي واجهت فريق العمل
