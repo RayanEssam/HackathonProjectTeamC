@@ -157,23 +157,19 @@ https://user-images.githubusercontent.com/92252937/146613073-e90b3ff2-7045-4468-
 ## حالات الاستخدام
 
 
-<img width="564" alt="Screen Shot 2021-12-19 at 12 01 59 AM" src="https://user-images.githubusercontent.com/92252937/146657885-2f61f524-5996-41c2-bf9a-71f6e1629861.png">
 
+ <p float= "right"><img src="https://user-images.githubusercontent.com/92252937/146657885-2f61f524-5996-41c2-bf9a-71f6e1629861.png" alt="" width="300">
 
-<img width="564" alt="Screen Shot 2021-12-19 at 12 02 36 AM" src="https://user-images.githubusercontent.com/92252937/146657891-2b5ba82b-ab25-4a6b-a8cc-7bd152107fb6.png">
+<img src="https://user-images.githubusercontent.com/92252937/146657891-2b5ba82b-ab25-4a6b-a8cc-7bd152107fb6.png" alt="" width="300">
 
+<img src="https://user-images.githubusercontent.com/92252937/146657901-34ce00b5-9757-4aeb-a69b-9f542f95a7e3.png" alt="" width="300">
 
-<img width="564" alt="Screen Shot 2021-12-19 at 12 03 03 AM" src="https://user-images.githubusercontent.com/92252937/146657901-34ce00b5-9757-4aeb-a69b-9f542f95a7e3.png">
+<img src="https://user-images.githubusercontent.com/92252937/146657913-eea319f6-102c-41d1-87b6-2fd6dad48388.png" alt="" width="300">
 
+<img src="https://user-images.githubusercontent.com/92252937/146657916-f70d50a4-5598-4a3a-adcc-2b3d783f0f08.png" alt="" width="300">
 
-![Uploading Screen Shot 2021-12-19 at 12.07.04 AM.png…]()
+</p>
 
-
-
-<img width="564" alt="Screen Shot 2021-12-19 at 12 08 10 AM" src="https://user-images.githubusercontent.com/92252937/146657913-eea319f6-102c-41d1-87b6-2fd6dad48388.png">
-
-
-<img width="564" alt="Screen Shot 2021-12-19 at 12 08 51 AM" src="https://user-images.githubusercontent.com/92252937/146657916-f70d50a4-5598-4a3a-adcc-2b3d783f0f08.png">
 
 
 
