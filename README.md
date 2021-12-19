@@ -139,9 +139,10 @@
 
 
 
-## نظرة أولية
+## شاشة البداية في التطبيق
 
-https://user-images.githubusercontent.com/92252937/146613073-e90b3ff2-7045-4468-a466-5874c0a1b424.mp4
+<img src="https://user-images.githubusercontent.com/92252803/146666732-12bbe574-e2aa-41e7-b5d8-578a0b8fa848.gif">
+
 
 
 ## القيمة المضافة للتطبيق
