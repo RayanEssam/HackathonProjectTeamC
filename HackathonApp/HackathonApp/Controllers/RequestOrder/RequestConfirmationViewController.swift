@@ -110,7 +110,7 @@ class RequestConfirmationViewController: UIViewController {
     @objc func showImagePicker(){
         
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         self.present(imagePicker, animated: true, completion: nil)
         

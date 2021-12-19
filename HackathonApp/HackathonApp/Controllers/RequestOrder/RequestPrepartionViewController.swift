@@ -108,6 +108,10 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
             
             requestSubmmition.locationName = placesArr[indexPath.row] .name
             requestSubmmition.locationDescription = placesArr[indexPath.row].description
+            requestSubmmition.long = placesArr[indexPath.row].coord.long
+            requestSubmmition.lat = placesArr[indexPath.row].coord.lat
+            
+            
             requestSubmmition.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(requestSubmmition, animated: true)
             
@@ -117,6 +121,8 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
             let requestSubmmition = RequestSeedsViewController()
             requestSubmmition.locationName = suppliesArr[indexPath.row] .name
             requestSubmmition.locationDescription = suppliesArr[indexPath.row].description
+            requestSubmmition.long = suppliesArr[indexPath.row].coord.long
+            requestSubmmition.lat = suppliesArr[indexPath.row].coord.lat
             requestSubmmition.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(requestSubmmition, animated: true)
             
@@ -124,6 +130,8 @@ class RequestPrepartionViewController: UIViewController, UITableViewDataSource, 
             let requestSubmmition = RequestSubmissionViewController()
             requestSubmmition.locationName = waterArr[indexPath.row] .name
             requestSubmmition.locationDescription = waterArr[indexPath.row].description
+            requestSubmmition.long = waterArr[indexPath.row].coord.long
+            requestSubmmition.lat = waterArr[indexPath.row].coord.lat
             requestSubmmition.submetButton.isHidden = true
             requestSubmmition.specialneedsAndDonations.isHidden = true
             requestSubmmition.modalPresentationStyle = .fullScreen
