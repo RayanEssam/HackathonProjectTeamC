@@ -239,7 +239,7 @@
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=green)](https://www.linkedin.com/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=green)](https://twitter.com/)
 
-
+## <a href="https://www.notion.so/Hackathon-44b6222479474f2b86df37f332b4d1d6" target="_blank"> notion تفاصيل المشروع في  </a>
 
    ## Made with ☘️💚🪴 and All go Green   
 
